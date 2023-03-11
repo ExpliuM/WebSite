@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "pnpm -F client dev",
+			"problemMatcher": [],
+			"label": "pnpm: dev - client",
+			"detail": "vite"
+		},
+		{
+			"type": "shell",
+			"command": "pnpm -F client build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "pnpm: build - client",
+			"detail": "tsc && vite build"
+		}
+	]
+}
