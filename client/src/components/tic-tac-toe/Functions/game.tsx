@@ -1,7 +1,5 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Board, { BoardState } from "./board";
 import { PLAYER } from "./constants";
+import Board, { BoardState } from "./board";
 
 export interface GameState {
   boardState: BoardState;
@@ -18,7 +16,11 @@ const getInitGameState = (): GameState => {
 };
 
 const playTurn = (gameState: GameState, xIndex: number, yIndex: number) => {
-  if (Board.getCell(gameState.boardState, xIndex, yIndex) === PLAYER.NO_ONE) {
+  const winner = Board.getWinner(gameState.boardState);
+  if (
+    winner === PLAYER.NO_ONE &&
+    Board.getCell(gameState.boardState, xIndex, yIndex) === PLAYER.NO_ONE
+  ) {
     Board.setCell(gameState.boardState, gameState.turn, xIndex, yIndex);
     nextTurn(gameState);
   }
