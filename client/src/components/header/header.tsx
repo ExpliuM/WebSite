@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Box, Grid, BoxProps, Typography } from "@mui/material";
 
+// TODO: To make projects page and to put Tic Tac Toe and Components under it
 const buttonsData: ReadonlyArray<{ text: string; href: string }> = [
   { text: "Main", href: "/" },
   { text: "CV", href: "/cv" },
