@@ -5,7 +5,7 @@
 			"type": "shell",
 			"command": "pnpm -F client dev",
 			"problemMatcher": [],
-			"label": "pnpm: dev - client",
+			"label": "pnpm: client dev",
 			"detail": "vite"
 		},
 		{
@@ -13,8 +13,16 @@
 			"command": "pnpm -F client build",
 			"group": "build",
 			"problemMatcher": [],
-			"label": "pnpm: build - client",
-			"detail": "tsc && vite build"
+			"label": "pnpm: client build",
+			"detail": "client tsc && vite build"
+		},
+		{
+			"type": "shell",
+			"command": "pnpm -F client run storybook",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "pnpm: client storybook",
+			"detail": "client storybook"
 		}
 	]
 }

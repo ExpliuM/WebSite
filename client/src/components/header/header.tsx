@@ -1,30 +1,22 @@
 import React from "react";
-import { Button, Box, Grid } from "@mui/material";
+import { Button, Box, Grid, BoxProps, Typography } from "@mui/material";
 
 const buttonsData: ReadonlyArray<{ text: string; href: string }> = [
   { text: "Main", href: "/" },
   { text: "CV", href: "/cv" },
+  { text: "Components", href: "/Components" },
   { text: "Tic Tac Toe", href: "/tic-tac-toe" },
   { text: "About", href: "/about" },
+  { text: "Settings", href: "/Settings" },
 ];
 
-const HeaderComponent = () => (
-  <Box
-    bgcolor="primary.contrastText"
-    display="flex"
-    height="5vh"
-    padding="0.25rem"
-    width="100vw"
-  >
-    <Grid
-      container
-      justifyContent="center"
-      spacing={0.5}
-    >
+const Header = (props: BoxProps) => (
+  <Box {...props}>
+    <Grid container justifyContent="center" spacing={0.5}>
       {buttonsData.map(({ text, href }) => (
         <Grid item key={text}>
           <Button variant="contained" href={href}>
-            {text}
+            <Typography variant="subtitle1">{text}</Typography>
           </Button>
         </Grid>
       ))}
@@ -32,4 +24,4 @@ const HeaderComponent = () => (
   </Box>
 );
 
-export default HeaderComponent;
+export default Header;

@@ -69,6 +69,7 @@ const checkCol = (boardState: BoardState, xIndex: number) => {
 
 const checkDiag1 = (boardState: BoardState) => {
   if (
+    boardState.cellMatrix[0][0] !== '' &&
     boardState.cellMatrix[0][0] === boardState.cellMatrix[1][1] &&
     boardState.cellMatrix[1][1] === boardState.cellMatrix[2][2]
   ) {
@@ -78,6 +79,7 @@ const checkDiag1 = (boardState: BoardState) => {
 
 const checkDiag2 = (boardState: BoardState) => {
   if (
+    boardState.cellMatrix[0][2] !== '' &&
     boardState.cellMatrix[0][2] === boardState.cellMatrix[1][1] &&
     boardState.cellMatrix[1][1] === boardState.cellMatrix[2][0]
   ) {

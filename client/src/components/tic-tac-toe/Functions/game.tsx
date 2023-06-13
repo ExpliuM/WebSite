@@ -43,4 +43,7 @@ const nextTurn = (gameState: GameState) => {
 
 const Game = { getInitGameState, nextTurn, playTurn, reset };
 
+//TODO: rename this file
+//TODO: delete function folder
+//TODO: find better place for all this random files we have here
 export default Game;

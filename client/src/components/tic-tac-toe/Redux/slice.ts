@@ -11,7 +11,7 @@ const initialState: stateInterface = {
   gameState: Game.getInitGameState(),
 };
 
-export const ticTacToeSlice = createSlice({
+export const Slice = createSlice({
   name: "Tic-Tac-Toe",
   initialState,
   reducers: {
@@ -28,7 +28,7 @@ export const ticTacToeSlice = createSlice({
   },
 });
 
-export const { playTurn, reset } = ticTacToeSlice.actions;
+export const { playTurn, reset } = Slice.actions;
 
 export const selectBoard = (state: { ticTacToe: stateInterface }) => {
   return Board.getBoard(state.ticTacToe.gameState.boardState);
@@ -38,6 +38,6 @@ export const selectWinner = (state: { ticTacToe: stateInterface }) => {
   return Board.getWinner(state.ticTacToe.gameState.boardState);
 };
 
-const ticTacToeReducer = ticTacToeSlice.reducer;
+const Reducer = Slice.reducer;
 
-export default ticTacToeReducer;
+export default Reducer;
