@@ -1,22 +1,88 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
+import {
+  AiOutlineHome,
+  AiOutlinePhone,
+  AiOutlineLinkedin,
+  AiOutlineMail,
+} from "react-icons/ai";
+import { BiCode } from "react-icons/Bi";
+import { GiSkills } from "react-icons/Gi";
+
 const CV = () => (
   <Box>
     <Typography align="center" color="text.primary" variant="h3">
-      CV
-    </Typography>
-    <Typography align="center" color="text.primary" variant="body1">
-      This page will contain my CV
+      Alexander Khvolis
     </Typography>
     <Typography color="text.primary">
       <p>
-        Crailsheim, Germany 017620126517 www.linkedin.com/in/alex-khvolis
-        alex1309@gmail.com SKILLS  Programming Languages: JavaScript, C++, C,
-        Bash, Python, Perl, java.  Environment: VSCode, IntelliJ, Visual
-        Studio, Eclipse.  Operation Systems: MacOS, Ubuntu, CentOS, VxWorks,
-        Unix.  APIs: React, NodeJS, Redux  Tools: Git, Monday, Jira  Cloud:
-        GCP, Azure.  Databases: Neo4J, Datastore, Firebase, PostgreSQL.
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          width="100%"
+        >
+          <Box
+            alignItems="center"
+            display="flex"
+            flexDirection="row"
+            gap="0.5rem"
+            marginRight="1rem"
+          >
+            <AiOutlineHome />
+            Crailsheim, Germany
+          </Box>
+          |
+          <Box
+            alignItems="center"
+            display="flex"
+            flexDirection="row"
+            gap="0.5rem"
+            marginRight="1rem"
+            marginLeft="1rem"
+          >
+            <AiOutlinePhone /> 017620126517
+          </Box>
+          |
+          <Box
+            alignItems="center"
+            display="flex"
+            flexDirection="row"
+            gap="0.5rem"
+            marginRight="1rem"
+            marginLeft="1rem"
+          >
+            <AiOutlineLinkedin /> www.linkedin.com/in/alex-khvolis
+          </Box>
+          |
+          <Box
+            alignItems="center"
+            display="flex"
+            flexDirection="row"
+            gap="0.5rem"
+            marginLeft="1rem"
+          >
+            <AiOutlineMail /> alex1309@gmail.com
+          </Box>
+          <br />
+        </Box>
+        <Box
+          display="flex"
+          gap="0.5rem"
+          alignItems="center"
+          justifyContent="center"
+          width="100%"
+        >
+          <GiSkills />
+          <Typography variant="subtitle2">SKILLS</Typography>
+        </Box>
+        <br />
+        <BiCode /> Programming Languages: JavaScript, C++, C, Bash, Python,
+        Perl,java. Environment: VSCode, IntelliJ, Visual Studio, Eclipse.
+        Operation Systems: MacOS, Ubuntu, CentOS, VxWorks, Unix. APIs:
+        React,NodeJS, Redux Tools: Git, Monday, Jira Cloud: GCP, Azure.
+        Databases: Neo4J, Datastore, Firebase, PostgreSQL.
       </p>
       <p>
         EXPERIENCE
