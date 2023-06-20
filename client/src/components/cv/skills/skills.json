@@ -1,0 +1,17 @@
+{
+  "Programming Languages": [
+    "JavaScript",
+    "C++",
+    "C",
+    "Bash",
+    "Python",
+    "Perl",
+    "java"
+  ],
+  "Environment": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
+  "Operation Systems": ["MacOS", "Ubuntu", "CentOS", "VxWorks", "Unix"],
+  "API's": ["React", "NodeJS", "Redux"],
+  "Tools": ["Git", "Monday", "Jira"],
+  "Cloud": ["GCP", "Azure"],
+  "Databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"]
+}

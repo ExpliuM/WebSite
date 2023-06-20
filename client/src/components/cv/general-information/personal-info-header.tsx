@@ -10,10 +10,6 @@ import {
 
 const PersonalInfoHeader = (props: BoxProps) => (
   <Box
-    display="flex"
-    flexDirection="row"
-    justifyContent="center"
-    width="100%"
     {...props}
   >
     <Box
