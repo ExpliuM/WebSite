@@ -1,15 +1,25 @@
+import { Box, BoxProps, Typography } from "@mui/material";
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import TicTacToe from "../components/tic-tac-toe/tic-tac-toe";
 
-const Components = () => (
-  <Box>
-    <Typography align="center" color="text.primary" variant="h3">
+import { TbIcons } from "react-icons/tb";
+import IconBox from "../components/icon-box/icon-box";
+
+const Components = (props: BoxProps) => (
+  <Box alignItems="center" display="flex" flexDirection="column" {...props}>
+    <Typography color="text.primary" variant="h3">
       Components
     </Typography>
-    <Typography align="center" color="text.primary" variant="body1">
-      This page will contain in the future a list of cool components I
-      implemented
+    <Typography color="text.primary" variant="body1">
+      <Typography color="text.primary" paragraph>
+        This page will contain in the future a list of cool components I
+        implemented
+      </Typography>
+      <Typography color="text.primary" paragraph>
+        IconBox:
+        <IconBox color="text.primary" Icon={TbIcons}>
+          TbIcons
+        </IconBox>
+      </Typography>
     </Typography>
   </Box>
 );

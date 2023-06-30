@@ -1,13 +1,16 @@
 import { AiOutlineCloud } from "react-icons/ai";
-import { Box, BoxProps, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React from "react";
-import IconBox from "../../../icon-box/icon-box";
 
-const Clouds = (props: BoxProps) => {
+import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+
+const Clouds = (props: IconBoxProps) => {
   return (
     <IconBox Icon={AiOutlineCloud} {...props}>
-      <Typography variant="subtitle2">Clouds:</Typography>
-      GCP, Azure.
+      <Typography color="text.primary" variant="subtitle2">
+        Clouds:
+      </Typography>
+      <Typography color="text.primary">GCP, Azure.</Typography>
     </IconBox>
   );
 };

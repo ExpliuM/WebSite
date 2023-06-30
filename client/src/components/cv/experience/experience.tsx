@@ -1,27 +1,23 @@
-import { Box, BoxProps, Typography } from "@mui/material";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import EquityBee from "./cards/equitybee";
-import IconBox from "../../icon-box/icon-box";
+import { Box, BoxProps } from "@mui/material";
 import React from "react";
-import Forescout from "./cards/forescout";
-import Rafael from "./cards/rafael";
+
+import CollapsedCards from "../../collapsed-cards/collapsed-cards";
+import equitybeeCollapsedCardData from "./cards/data/equitybee/collapsed-card-data";
+import collapsedCardsData from "./cards/data/forescout/collapsed-card-data";
+import rafaelCollapsedCardsData from "./cards/data/rafael/collapsed-card-data";
 
 const Experience = (props: BoxProps) => (
   <Box {...props}>
-    <IconBox
-      alignItems="center"
+    <CollapsedCards
+      cards={[
+        equitybeeCollapsedCardData,
+        collapsedCardsData,
+        rafaelCollapsedCardsData,
+      ]}
       display="flex"
-      gap="0.5rem"
-      Icon={MdOutlineWorkOutline}
-      justifyContent="center"
-      width="100%"
-      iconProps={{ color: "white" }}
-    >
-      <Typography variant="h6">EXPERIENCE</Typography>
-    </IconBox>
-    <EquityBee />
-    <Forescout />
-    <Rafael />
+      flexDirection="row"
+      height="100%"
+    />
   </Box>
 );
 

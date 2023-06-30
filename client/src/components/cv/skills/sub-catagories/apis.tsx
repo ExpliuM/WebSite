@@ -1,12 +1,16 @@
 import { AiOutlineApi } from "react-icons/ai";
-import { BoxProps, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React from "react";
-import IconBox from "../../../icon-box/icon-box";
 
-const APIs = (props: BoxProps) => {
+import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+
+const APIs = (props: IconBoxProps) => {
   return (
     <IconBox Icon={AiOutlineApi} {...props}>
-      <Typography variant="subtitle2">API's:</Typography> React,NodeJS, Redux
+      <Typography color="text.primary" variant="subtitle2">
+        API's:
+      </Typography>
+      <Typography color="text.primary">React,NodeJS, Redux</Typography>
     </IconBox>
   );
 };

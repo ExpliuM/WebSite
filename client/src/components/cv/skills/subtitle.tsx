@@ -12,7 +12,7 @@ const SubTitle = (props: SubTitleProps) => {
   return (
     <Box {...otherProps}>
       <GiSkills />
-      <Typography variant="subtitle2" {...typographyProps}>
+      <Typography color="text.primary" variant="subtitle2" {...typographyProps}>
         {children}
       </Typography>
     </Box>

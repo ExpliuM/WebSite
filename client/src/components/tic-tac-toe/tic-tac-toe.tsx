@@ -22,11 +22,12 @@ const TicTacToe = (props: BoxProps) => {
             width: "100%",
             height: "100%",
             position: "fixed",
+            zIndex: 1,
           }}
         />
       )}
-      <Board />
-      <Box marginTop="1rem" marginBottom="1rem">
+      <Board zIndex="0"/>
+      <Box marginTop="1rem" marginBottom="1rem" zIndex="1">
         <ResetButton />
       </Box>
       {winner && <WinnerMessage winner={winner} />}

@@ -1,12 +1,17 @@
-import { BoxProps, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { BsDatabase } from "react-icons/bs";
-import IconBox from "../../../icon-box/icon-box";
 import React from "react";
 
-const Databases = (props: BoxProps) => (
+import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+
+const Databases = (props: IconBoxProps) => (
   <IconBox Icon={BsDatabase} {...props}>
-    <Typography variant="subtitle2">Databases:</Typography>
-    Neo4J, Datastore, Firebase, PostgreSQL.
+    <Typography color="text.primary" variant="subtitle2">
+      Databases:
+    </Typography>
+    <Typography color="text.primary">
+      Neo4J, Datastore, Firebase, PostgreSQL.
+    </Typography>
   </IconBox>
 );
 

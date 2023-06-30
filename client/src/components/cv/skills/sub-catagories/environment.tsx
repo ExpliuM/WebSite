@@ -1,12 +1,17 @@
-import { BoxProps, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { VscEditorLayout } from "react-icons/vsc";
-import IconBox from "../../../icon-box/icon-box";
 import React from "react";
 
-const Environments = (props: BoxProps) => (
+import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+
+const Environments = (props: IconBoxProps) => (
   <IconBox Icon={VscEditorLayout} {...props}>
-    <Typography variant="subtitle2">Environments:</Typography> VSCode, IntelliJ,
-    Visual Studio, Eclipse.
+    <Typography color="text.primary" variant="subtitle2">
+      Environments:
+    </Typography>
+    <Typography color="text.primary">
+      VSCode, IntelliJ, Visual Studio, Eclipse.
+    </Typography>
   </IconBox>
 );
 

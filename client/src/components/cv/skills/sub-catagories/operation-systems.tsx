@@ -1,12 +1,20 @@
-import { BoxProps, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { TfiMicrosoft } from "react-icons/tfi";
-import IconBox from "../../../icon-box/icon-box";
 import React from "react";
 
-const OperationSystems = (props: BoxProps) => (
-  <IconBox Icon={TfiMicrosoft} iconProps={{ style: { color: "#FFF" } }} {...props}>
-    <Typography variant="subtitle2">Operation Systems:</Typography> MacOS,
-    Ubuntu, CentOS, VxWorks, Unix.
+import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+
+const OperationSystems = (props: IconBoxProps) => (
+  <IconBox
+    Icon={TfiMicrosoft}
+    {...props}
+  >
+    <Typography color="text.primary" variant="subtitle2">
+      Operation Systems:
+    </Typography>
+    <Typography color="text.primary">
+      MacOS, Ubuntu, CentOS, VxWorks, Unix.
+    </Typography>
   </IconBox>
 );
 

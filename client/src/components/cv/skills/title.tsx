@@ -12,7 +12,7 @@ const Title = (props: TitleProps) => {
   return (
     <Box {...otherProps}>
       <GiSkills />
-      <Typography variant="h6" {...typographyProps}>
+      <Typography color="text.primary" variant="h6" {...typographyProps}>
         {children}
       </Typography>
     </Box>

@@ -9,8 +9,6 @@ const GeneralInformation = (props: BoxProps) => (
     <PersonalInfoHeader
       display="flex"
       flexDirection="row"
-      justifyContent="center"
-      width="100%"
     />
   </Box>
 );

@@ -1,10 +1,22 @@
 import { BrowserRouter } from "react-router-dom";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
+import CV from "./components/cv/data/cv.interfaces";
+import cvData from "./components/cv/data/cv-data";
+import cvSchema from "./components/cv/data/cv-schema";
+import reportWebVitals from "./reportWebVitals";
+import DataValidator from "./data-validator";
+
+// TODO: move this data validator to other place, and to make a specific validator for all data types
+const validator = new DataValidator<CV>(cvSchema);
+if (validator.validateData(cvData)) {
+  console.log("JSON data is valid.");
+} else {
+  console.log("JSON data is invalid.");
+  console.log(validator.getErrors());
+}
 
 const rootElement = document.getElementById("root");
 
