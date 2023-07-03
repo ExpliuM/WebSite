@@ -47,22 +47,18 @@ const ArrowedHeader = (props: ArrowedHeaderProps) => {
     if (value !== null) {
       setSelected((dataLen + selected - 1) % dataLen);
     }
-    onClick && onClick(selected);
+    onClick && onClick((dataLen + selected - 1) % dataLen);
   };
 
   const handleRightArrowClick = (): void => {
     if (value !== null) {
       setSelected((selected + 1) % dataLen);
     }
-    onClick && onClick(selected);
+    onClick && onClick((selected + 1) % dataLen);
   };
 
   return (
     <Box
-      alignItems="center"
-      display="flex"
-      flexDirection="row"
-      width="100%"
       {...otherProps}
     >
       <IconButton aria-label="left" onClick={handleLeftArrowClick}>

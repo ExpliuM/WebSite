@@ -35,7 +35,6 @@ const GenericCardHeader: ElementType = (props: GenericCardHeaderProps) => {
   const title = sideways ? verticalTitle : horizontalTitle;
   const subHeader = sideways ? verticalSubHeader : horizontalSubHeader;
   const titleTypographyProps = {
-    color: "text.primary",
     sx: sideways
       ? {
           textOrientation: "sideways",

@@ -5,14 +5,14 @@ import ArrowedHeader, {
   ArrowedHeaderEventHandler,
 } from "../arrowed-header/arrowed-header";
 import Education from "./education/education";
+import EducationHeaderButton from "./header/education-header-button";
 import Experience from "./experience/experience";
+import ExperienceHeaderButton from "./header/experience-header-button";
 import GeneralInformation from "./general-information/general-information";
 import Misc from "./misc/misc";
+import MiscHeaderButton from "./header/misc-header-button";
 import Skills from "./skills/skills";
 import Title from "./title";
-import ExperienceHeaderButton from "./header/experience-header-button";
-import EducationHeaderButton from "./header/education-header-button";
-import MiscHeaderButton from "./header/misc-header-button";
 
 const headerData = [
   {
@@ -30,7 +30,7 @@ const componentData = [
   {
     name: "Experience",
     Component: Experience,
-    componentProps: { height:"45vh", width:"100%" },
+    componentProps: { height: "45vh", width: "100%" },
   },
   {
     name: "Education",
@@ -75,13 +75,16 @@ const CV = (props: BoxProps) => {
         width="90%"
       >
         <ArrowedHeader
+          alignItems="center"
+          dataArray={headerData}
+          display="flex"
+          flexDirection="row"
           iconProps={{ size: "2rem" }}
+          onClick={handleArrowedHeaderClicked}
           paddingBottom="0.5rem"
           paddingTop="0.5rem"
-          width="100%"
-          dataArray={headerData}
-          onClick={handleArrowedHeaderClicked}
           value={selected}
+          width="100%"
         />
         {SelectedComponent && <SelectedComponent {...selectedProps} />}
       </Box>

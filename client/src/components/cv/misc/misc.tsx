@@ -1,17 +1,44 @@
-import { Box, BoxProps } from "@mui/material";
+import { Box, BoxProps, Card, CardProps } from "@mui/material";
 import React from "react";
 
-const Misc = (props: BoxProps) => (
-  <Box {...props}>
-    MISC
-    <br />
-    Languages: English, Hebrew, and Russian.
-    <br />
-    Volunteer programs: MADA (Ambulance first AID assist),Melech Project
-    (Donation program, computers for everyone) <br />
-    CCNA (Cisco Certified Network Associate)
-    <br />
-  </Box>
-);
+import { Misc as MiscInterface } from "../data/cv.types";
+import cvData from "../data/cv-data";
+import MiscCardContent, {
+  MiscCardContentProps,
+} from "./cards/misc-card-content";
+
+const misc: MiscInterface = cvData.misc;
+
+const Misc = (props: BoxProps) => {
+  const cardProps: CardProps = {
+    sx: {
+      backgroundColor: "primary.light",
+      borderRadius: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      height: "100%",
+      justifyContent: "center",
+      width: "100%",
+    },
+  };
+
+  const miscCardContentProps: MiscCardContentProps = {
+    misc,
+    sx: {
+      alignItems: "center",
+      display: "flex",
+      flexDirection: "column",
+      padding: "0.1rem",
+    },
+  };
+
+  return (
+    <Box {...props}>
+      <Card {...cardProps}>
+        <MiscCardContent {...miscCardContentProps} />
+      </Card>
+    </Box>
+  );
+};
 
 export default Misc;

@@ -1,9 +1,10 @@
 import React, { ElementType } from "react";
 
-import { Experience } from "../../data/cv.interfaces";
+import { Experience } from "../../data/cv.types";
+
 import GenericCardHeader, {
   GenericCardHeaderProps,
-} from "./generic-card-header";
+} from "../../../card/generic-card-header/generic-card-header";
 import Logo from "./logo.svg";
 
 type ExperienceCardHeaderProps = GenericCardHeaderProps & {
@@ -15,10 +16,10 @@ const ExperienceCardHeader: ElementType = (
 ) => {
   const { experience, Logo, sideways, ...otherProps } = props;
 
-  const horizontalSubHeader = `${experience.WorkPeriod.From} - ${experience.WorkPeriod.Till}`;
-  const horizontalTitle = `${experience.CompanyName} | ${experience.Title} | ${experience.ProfessionalTitle}`;
+  const horizontalSubHeader = `${experience.workPeriod.From} - ${experience.workPeriod.Till}`;
+  const horizontalTitle = `${experience.companyName} | ${experience.Title} | ${experience.professionalTitle}`;
   const verticalSubHeader = "";
-  const verticalTitle = `${experience.CompanyName} | ${experience.ProfessionalTitle} | ${experience.WorkPeriod.From} - ${experience.WorkPeriod.Till}`;
+  const verticalTitle = `${experience.companyName} | ${experience.professionalTitle}`;
 
   return (
     <GenericCardHeader

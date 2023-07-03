@@ -1,6 +1,8 @@
+import { JSONSchemaType } from "ajv";
+
+import { CV } from "./cv.types";
 import cvData from "./cv.json";
-import CV from "./cv.interfaces";
 
-const cv: CV = cvData as CV;
+const cv: CV = cvData;
 
-export default cvData;
+export default cv;

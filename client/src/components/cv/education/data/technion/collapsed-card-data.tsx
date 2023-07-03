@@ -1,5 +1,5 @@
-import { CollapsedCardData } from "../../../../../collapsed-cards/collapsed-cards";
 
+import { CollapsedCardData } from "../../../../collapsed-cards/collapsed-cards";
 import CardContent from "./card-content";
 import CardHeader from "./card-header";
 

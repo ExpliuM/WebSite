@@ -1,7 +1,4 @@
-import addFormats, {
-  FormatName,
-  FormatOptions,
-} from "ajv-formats";
+import addFormats, { FormatName, FormatOptions } from "ajv-formats";
 import Ajv, { ErrorObject, JSONSchemaType, ValidateFunction } from "ajv";
 
 class DataValidator<T> {

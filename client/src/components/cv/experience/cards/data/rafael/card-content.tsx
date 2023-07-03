@@ -4,7 +4,7 @@ import cv from "../../../../data/cv.json";
 import ExperienceCardContent from "../../experience-card-content";
 
 const experienceIndex = 2;
-const experience = cv.Experience[experienceIndex];
+const experience = cv.experience[experienceIndex];
 
 const CardContent: ElementType = () => {
   return <ExperienceCardContent experience={experience} />;

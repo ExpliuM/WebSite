@@ -3,28 +3,48 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#2ebac9",
-      light: "#abe1de",
-      dark: "#205368",
-      contrastText: "#000000",
+      main: "#679186",
+      light: "#bbd4ce",
+      dark: "#264e70",
+      contrastText: "#fdebd3",
     },
     secondary: {
-      main: '#ba2ec9',
-      light: '#e1abde',
-      dark: '#532068',
+      main: '#64CCC5',
+      light: '#DAFFFB',
+      dark: '#176B87',
       contrastText: '#000000',
     },
     text: {
       primary: "#000000",
       secondary: "#808080",
-      disabled: "#808080",
+      disabled: "#e0e0e0",
     },
   },
 });
 
 // palette: {
 //   primary: {
-//     main: "#3f3f3f",
+//     main: "#2ebac9",
+//     light: "#abe1de",
+//     dark: "#205368",
+//     contrastText: "#000000",
+//   },
+//   secondary: {
+//     main: '#ba2ec9',
+//     light: '#e1abde',
+//     dark: '#532068',
+//     contrastText: '#000000',
+//   },
+//   text: {
+//     primary: "#000000",
+//     secondary: "#808080",
+//     disabled: "#e0e0e0",
+//   },
+// },
+
+// palette: {
+  //   primary: {
+    //     main: "#3f3f3f",
 //     light: "#717171",
 //     dark: "#282828",
 //     contrastText: "#9d718a",

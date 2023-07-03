@@ -2,7 +2,7 @@ import CardContent, { CardContentProps } from "@mui/material/CardContent";
 import React, { ElementType } from "react";
 import Typography from "@mui/material/Typography";
 
-import { Experience } from "../../data/cv.interfaces";
+import { Experience } from "../../data/cv.types";
 
 export type ExperienceCardContentProps = CardContentProps & {
   experience: Experience;
@@ -12,24 +12,24 @@ const ExperienceCardContent: ElementType = (
   props: ExperienceCardContentProps
 ) => {
   const { experience, ...otherProps } = props;
-  const { GeneralDescription, ProjectsAndTasks } = experience;
+  const { generalDescription, projectsAndTasks } = experience;
 
   return (
     <CardContent {...otherProps}>
-      <Typography variant="subtitle1">General description:</Typography>
+      <Typography variant="subtitle2">General description:</Typography>
       <Typography
         color="text.primary"
         paddingLeft="1rem"
         paragraph
         variant="body2"
       >
-        {GeneralDescription}
+        {generalDescription}
       </Typography>
 
-      <Typography variant="subtitle1">
+      <Typography variant="subtitle2">
         Projects, tasks, and responsibilities:
       </Typography>
-      {Object.entries(ProjectsAndTasks || {}).map(
+      {Object.entries(projectsAndTasks || {}).map(
         ([projectName, projectDescription], index) => (
           <Typography
             key={index}
