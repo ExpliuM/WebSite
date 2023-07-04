@@ -5,10 +5,21 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import { Box, BoxProps, Typography } from "@mui/material";
-import IconBox, { IconBoxProps } from "../../icon-box/icon-box";
 import React from "react";
 
-const PersonalInfoHeader = (props: BoxProps) => {
+import { GeneralInformation } from "../data/cv.types";
+import IconBox, { IconBoxProps } from "../../icon-box/icon-box";
+import { Url } from "url";
+
+type GeneralInformationHeaderProps = BoxProps & {
+  generalInformation: GeneralInformation;
+};
+
+const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
+  const { generalInformation, ...otherProps } = props;
+  const { address, email, linkedInLink, phoneNumber } = generalInformation;
+  const linkedInLinkUrl: URL = new URL(linkedInLink);
+
   const baseIconBoxProps: IconBoxProps = {
     alignItems: "center",
     display: "flex",
@@ -35,26 +46,24 @@ const PersonalInfoHeader = (props: BoxProps) => {
   const typographyProps = { color: "text.primary" };
 
   return (
-    <Box {...props}>
+    <Box {...otherProps}>
       <IconBox Icon={AiOutlineHome} {...leftIconBoxProps}>
-        <Typography {...typographyProps}>Crailsheim, Germany</Typography>
+        <Typography {...typographyProps}>{address}</Typography>
       </IconBox>
       <Typography {...typographyProps}>|</Typography>
       <IconBox Icon={AiOutlinePhone} {...middleIconBoxProps}>
-        <Typography {...typographyProps}>+4917620126517</Typography>
+        <Typography {...typographyProps}>{phoneNumber}</Typography>
       </IconBox>
       <Typography {...typographyProps}>|</Typography>
       <IconBox Icon={AiOutlineLinkedin} {...middleIconBoxProps}>
-        <Typography {...typographyProps}>
-          www.linkedin.com/in/alex-khvolis
-        </Typography>
+        <Typography {...typographyProps}>{linkedInLinkUrl.host+linkedInLinkUrl.pathname}</Typography>
       </IconBox>
       <Typography {...typographyProps}>|</Typography>
       <IconBox Icon={AiOutlineMail} {...middleIconBoxProps}>
-        <Typography {...typographyProps}>alex1309@gmail.com</Typography>
+        <Typography {...typographyProps}>{email}</Typography>
       </IconBox>
       <br />
     </Box>
   );
 };
-export default PersonalInfoHeader;
+export default GeneralInformationHeader;

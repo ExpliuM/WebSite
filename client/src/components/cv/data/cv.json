@@ -1,17 +1,17 @@
 {
   "name": "Alexander Khvolis",
   "generalInformation": {
-    "Address": "Crailsheim, Germany",
-    "Email": "alex1309@gmail.com",
-    "LinkedInLink": "https://www.linkedin.com/in/alex-khvolis",
-    "PhoneNumber": "017620126517"
+    "address": "Crailsheim, Germany",
+    "email": "alex1309@gmail.com",
+    "linkedInLink": "https://www.linkedin.com/in/alex-khvolis",
+    "phoneNumber": "017620126517"
   },
   "skills": {
-    "APIs": ["React", "NodeJS", "Redux"],
-    "Clouds": ["GCP", "Azure"],
-    "Databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
-    "Environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
-    "Operation Systems": [
+    "apis": ["React", "NodeJS", "Redux"],
+    "clouds": ["GCP", "Azure"],
+    "databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
+    "environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
+    "operationSystems": [
       "MacOS",
       "Ubuntu",
       "CentOS",
@@ -19,7 +19,7 @@
       "Unix",
       "Windows"
     ],
-    "Programming Languages": [
+    "programmingLanguages": [
       "JavaScript",
       "Typescript",
       "C++",
@@ -29,24 +29,24 @@
       "Perl",
       "java"
     ],
-    "Tools": ["Git", "Monday", "Jira"]
+    "tools": ["Git", "Monday", "Jira"]
   },
   "experience": [
     {
       "companyName": "EquityBee",
       "professionalTitle": "Full-Stack developer",
-      "Title": "Marketing Dev Squad Tech Lead",
+      "title": "Marketing Dev Squad Tech Lead",
       "workPeriod": {
         "From": "06/2021",
         "Till": "Today"
       },
-      "Skills": {
-        "APIs": ["React", "NodeJS", "Redux"],
-        "Clouds": ["GCP"],
-        "Databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
-        "Environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
-        "Operation Systems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
-        "Programming Languages": [
+      "skills": {
+        "apis": ["React", "NodeJS", "Redux"],
+        "clouds": ["GCP"],
+        "databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
+        "environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
+        "operationSystems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
+        "programmingLanguages": [
           "JavaScript",
           "Typescript",
           "C++",
@@ -56,7 +56,7 @@
           "Perl",
           "java"
         ],
-        "Tools": ["Git", "Monday", "Jira"]
+        "tools": ["Git", "Monday", "Jira"]
       },
       "generalDescription": "Marketing dev squad tech leader  - Accompanying the team members with providing the solutions plan, design, architecture, development, and documentation. alongside with code reviewing and team member's technical training and growth",
       "projectsAndTasks": {
@@ -71,19 +71,19 @@
     {
       "companyName": "Forescout",
       "professionalTitle": "Software Developer",
-      "Title": "Sustaining Team member",
+      "title": "Sustaining Team member",
       "workPeriod": {
         "From": "08/2019",
         "Till": "06/2021"
       },
-      "Skills": {
-        "APIs": [],
-        "Clouds": [],
-        "Databases": ["PostgreSQL"],
-        "Environments": ["VSCode, IntelliJ, Visual Studio, Eclipse"],
-        "Operation Systems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
-        "Programming Languages": ["C++", "C", "Bash", "Python", "Perl", "java"],
-        "Tools": ["Git", "Jira"]
+      "skills": {
+        "apis": [],
+        "clouds": [],
+        "databases": ["PostgreSQL"],
+        "environments": ["VSCode, IntelliJ, Visual Studio, Eclipse"],
+        "operationSystems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
+        "programmingLanguages": ["C++", "C", "Bash", "Python", "Perl", "java"],
+        "tools": ["Git", "Jira"]
       },
       "generalDescription": "Sustaining Team Member - Code Refactoring, Features and bug fixes implementation for all the legacy products",
       "projectsAndTasks": {
@@ -95,19 +95,19 @@
     {
       "companyName": "Rafael",
       "professionalTitle": "Real-Time Embedded Software Developer",
-      "Title": "Central software team member",
+      "title": "Central software team member",
       "workPeriod": {
         "From": "05/2017",
         "Till": "08/2019"
       },
-      "Skills": {
-        "APIs": [],
-        "Clouds": [],
-        "Databases": [],
-        "Environments": ["Visual Studio"],
-        "Operation Systems": ["VxWorks"],
-        "Programming Languages": ["C++", "C"],
-        "Tools": []
+      "skills": {
+        "apis": [],
+        "clouds": [],
+        "databases": [],
+        "environments": ["Visual Studio"],
+        "operationSystems": ["VxWorks"],
+        "programmingLanguages": ["C++", "C"],
+        "tools": []
       },
       "generalDescription": "Central software team member - Central software code development and algorithm integration",
       "projectsAndTasks": {

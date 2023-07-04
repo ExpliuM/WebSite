@@ -17,10 +17,9 @@ const EducationCardContent: ElementType = (
 
   return (
     <CardContent {...otherProps}>
-      {_.map(education, ({ degree, institute, projects }, index) => (
-        <Box>
+      {_.map(education, ({ degree, institute, projects }, educationIndex) => (
+        <Box key={educationIndex}>
           <Typography
-            key={`education-${institute}`}
             color="text.primary"
             paddingLeft="1rem"
             marginBottom="0.5rem"
@@ -29,19 +28,22 @@ const EducationCardContent: ElementType = (
           >
             {`${institute} - ${degree}`}
           </Typography>
-          {_.map(projects, ({ courseName, description, technology }, index) => (
-            <Typography
-              key={`${institute}-projects-${index}`}
-              color="text.primary"
-              paddingLeft="2rem"
-              marginBottom="0.5rem"
-              paragraph
-              variant="body2"
-            >
-              {`${courseName} - ${description}`}
-              {technology}
-            </Typography>
-          ))}
+          {_.map(
+            projects,
+            ({ courseName, description, technology }, projectIndex) => (
+              <Typography
+                key={projectIndex}
+                color="text.primary"
+                paddingLeft="2rem"
+                marginBottom="0.5rem"
+                paragraph
+                variant="body2"
+              >
+                {`${courseName} - ${description}`}
+                {technology}
+              </Typography>
+            )
+          )}
         </Box>
       ))}
     </CardContent>

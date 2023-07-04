@@ -1,12 +1,19 @@
+export interface GeneralInformation {
+  address: string;
+  email: string;
+  linkedInLink: string;
+  phoneNumber: string;
+}
+
 export interface workPeriod {
   from: string;
   till: string;
 }
 
 export interface Skills {
-  "operationSystems": string[];
-  "programmingLanguages": string[];
-  aPIs: string[];
+  operationSystems: string[];
+  programmingLanguages: string[];
+  apis: string[];
   clouds: string[];
   databases: string[];
   environments: string[];
@@ -46,15 +53,11 @@ export interface Misc {
   volunteerPrograms: string;
 }
 
+
 export interface CV {
   education: Education[];
   experience: Experience[];
-  generalInformation: {
-    address: string;
-    email: string;
-    linkedInLink: string;
-    phoneNumber: string;
-  };
+  generalInformation: GeneralInformation;
   misc: Misc;
   name: string;
   skills: Skills;

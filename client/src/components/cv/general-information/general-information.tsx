@@ -1,12 +1,19 @@
 import { Box, BoxProps } from "@mui/material";
-import PersonalInfoHeader from "./personal-info-header";
 import React from "react";
+
+import { GeneralInformation as GeneralInformationInterface } from "../data/cv.types";
+import cvData from "../../cv/data/cv-data";
+import GeneralInformationHeader from "./general-information-header";
 import SubTitle from "../subtitle";
+
+const generalInformation: GeneralInformationInterface =
+  cvData.generalInformation;
 
 const GeneralInformation = (props: BoxProps) => (
   <Box {...props}>
     <SubTitle align="center">General Information</SubTitle>
-    <PersonalInfoHeader
+    <GeneralInformationHeader
+      generalInformation={generalInformation}
       display="flex"
       flexDirection="row"
     />

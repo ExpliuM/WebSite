@@ -5,7 +5,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { CV } from "./components/cv/data/cv.types";
 import cvData from "./components/cv/data/cv-data";
-import cvSchema from "./components/cv/data/cv-schema";
+import cvSchema from "./components/cv/data/schemas/cv-schema";
 import reportWebVitals from "./reportWebVitals";
 import DataValidator from "./data-validator";
 import { JSONSchemaType } from "ajv";

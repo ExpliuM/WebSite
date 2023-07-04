@@ -1,5 +1,3 @@
-import { JSONSchemaType } from "ajv";
-
 import { CV } from "./cv.types";
 import cvData from "./cv.json";
 
