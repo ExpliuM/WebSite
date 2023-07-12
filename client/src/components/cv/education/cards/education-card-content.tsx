@@ -7,17 +7,17 @@ import { Education } from "../../data/cv.types";
 import { Box } from "@mui/material";
 
 export type EducationCardContentProps = CardContentProps & {
-  education: Education[];
+  educations: Education[];
 };
 
 const EducationCardContent: ElementType = (
   props: EducationCardContentProps
 ) => {
-  const { education, ...otherProps } = props;
+  const { educations, ...otherProps } = props;
 
   return (
     <CardContent {...otherProps}>
-      {_.map(education, ({ degree, institute, projects }, educationIndex) => (
+      {_.map(educations, ({ degree, institute, projects }, educationIndex) => (
         <Box key={educationIndex}>
           <Typography
             color="text.primary"

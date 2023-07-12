@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Typography} from "@mui/material";
+import { Button, ButtonProps, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import React from "react";
 
@@ -12,7 +12,7 @@ const ResetButton = (props: ButtonProps) => {
   };
 
   return (
-    <Button color="secondary" onClick={handleResetClick}>
+    <Button color="secondary" onClick={handleResetClick} {...props}>
       <Typography color="text.secondary" variant="body2">
         Reset
       </Typography>

@@ -11,13 +11,13 @@ const cvSchema = {
     name: { type: "string" },
     generalInformation: generalInformationSchema,
     skills: skillsSchema,
-    experience: {
+    experiences: {
       type: "array",
       items: {
         anyOf: [experienceSchema],
       },
     },
-    education: {
+    educations: {
       type: "array",
       items: {
         anyOf: [educationSchema],
@@ -26,8 +26,8 @@ const cvSchema = {
     misc: miscSchema,
   },
   required: [
-    "education",
-    "experience",
+    "educations",
+    "experiences",
     "generalInformation",
     "misc",
     "name",

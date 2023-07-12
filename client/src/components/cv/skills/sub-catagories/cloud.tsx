@@ -4,13 +4,21 @@ import React from "react";
 
 import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
 
-const Clouds = (props: IconBoxProps) => {
+export type CloudsProps = IconBoxProps & {
+  clouds: string[];
+};
+
+const Clouds = (props: CloudsProps) => {
+  const { clouds, ...otherProps } = props;
+
   return (
-    <IconBox Icon={AiOutlineCloud} {...props}>
-      <Typography color="text.primary" variant="subtitle2">
+    <IconBox Icon={AiOutlineCloud} {...otherProps}>
+      <Typography color="text.primary" variant="subtitle1">
         Clouds:
       </Typography>
-      <Typography color="text.primary">GCP, Azure.</Typography>
+      <Typography color="text.primary" variant="body1">
+        {clouds.join(", ")}
+      </Typography>
     </IconBox>
   );
 };

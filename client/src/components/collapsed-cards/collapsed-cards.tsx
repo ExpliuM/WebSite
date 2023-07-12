@@ -1,19 +1,22 @@
-import { Box, BoxProps, Card, Collapse } from "@mui/material";
+import { PropsOf } from "@emotion/react";
+import { Box, BoxProps, Card } from "@mui/material";
 import React, { ElementType, Fragment, useState } from "react";
 
 export type CollapsedCardData = {
-  CardContent: ElementType<any>;
-  CardHeader: ElementType<any>;
+  CardContent: ElementType;
+  cardContentProps: PropsOf<ElementType>;
+  CardHeader: ElementType;
+  cardHeaderProps: PropsOf<ElementType>;
 };
 
 export type CollapsedCardsData = Array<CollapsedCardData>;
 
 export type CollapsedCardsProps = BoxProps & {
-  cards?: CollapsedCardsData;
+  collapsedCardsData?: CollapsedCardsData;
 };
 
 const CollapsedCards = (props: CollapsedCardsProps) => {
-  const { cards = [], ...otherProps } = props;
+  const { collapsedCardsData = [], ...otherProps } = props;
 
   const [focused, setFocused] = useState(0);
 
@@ -23,33 +26,38 @@ const CollapsedCards = (props: CollapsedCardsProps) => {
 
   return (
     <Box {...otherProps}>
-      {cards.map(({ CardContent, CardHeader }, cardIndex) => (
-        <Card
-          key={cardIndex}
-          onMouseOverCapture={handleMouseOverCapture(cardIndex)}
-          sx={{
-            backgroundColor:
-              focused === cardIndex ? "primary.light" : "primary.dark",
-            borderRadius: "1rem",
-            width: focused === cardIndex ? "90%" : "5%",
-          }}
-        >
-          {CardHeader && (
-            <CardHeader
-              sideways={focused !== cardIndex}
-              sx={{
-                padding: "0.5rem",
-                color: focused === cardIndex ? "text.main" : "text.disabled",
-              }}
-            />
-          )}
-          {focused === cardIndex ? (
-            <Fragment>
-              {CardContent && <CardContent sx={{ padding: "0.1rem" }} />}
-            </Fragment>
-          ) : null}
-        </Card>
-      ))}
+      {collapsedCardsData.map(
+        (
+          { CardContent, cardContentProps, CardHeader, cardHeaderProps },
+          cardIndex
+        ) => (
+          <Card
+            key={cardIndex}
+            onMouseOverCapture={handleMouseOverCapture(cardIndex)}
+            sx={{
+              backgroundColor:
+                focused === cardIndex ? "primary.light" : "primary.dark",
+              borderRadius: "1rem",
+              width: focused === cardIndex ? "90%" : "5%",
+            }}
+          >
+            {CardHeader && (
+              <CardHeader
+                sideways={focused !== cardIndex}
+                sx={{
+                  color: focused === cardIndex ? "text.main" : "text.disabled",
+                }}
+                {...cardHeaderProps}
+              />
+            )}
+            {focused === cardIndex ? (
+              <Fragment>
+                {CardContent && <CardContent {...cardContentProps} />}
+              </Fragment>
+            ) : null}
+          </Card>
+        )
+      )}
     </Box>
   );
 };

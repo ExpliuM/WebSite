@@ -1,3 +1,5 @@
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const reportWebVitals = (onPerfEntry?: any) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {

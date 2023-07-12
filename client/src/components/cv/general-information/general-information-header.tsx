@@ -4,12 +4,11 @@ import {
   AiOutlineLinkedin,
   AiOutlineMail,
 } from "react-icons/ai";
-import { Box, BoxProps, Typography } from "@mui/material";
+import { Box, BoxProps, Typography, TypographyProps } from "@mui/material";
 import React from "react";
 
 import { GeneralInformation } from "../data/cv.types";
 import IconBox, { IconBoxProps } from "../../icon-box/icon-box";
-import { Url } from "url";
 
 type GeneralInformationHeaderProps = BoxProps & {
   generalInformation: GeneralInformation;
@@ -17,7 +16,9 @@ type GeneralInformationHeaderProps = BoxProps & {
 
 const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
   const { generalInformation, ...otherProps } = props;
+
   const { address, email, linkedInLink, phoneNumber } = generalInformation;
+
   const linkedInLinkUrl: URL = new URL(linkedInLink);
 
   const baseIconBoxProps: IconBoxProps = {
@@ -43,7 +44,10 @@ const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
     marginLeft: "1rem",
   };
 
-  const typographyProps = { color: "text.primary" };
+  const typographyProps: TypographyProps = {
+    color: "text.primary",
+    variant: "body1",
+  };
 
   return (
     <Box {...otherProps}>
@@ -56,10 +60,12 @@ const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
       </IconBox>
       <Typography {...typographyProps}>|</Typography>
       <IconBox Icon={AiOutlineLinkedin} {...middleIconBoxProps}>
-        <Typography {...typographyProps}>{linkedInLinkUrl.host+linkedInLinkUrl.pathname}</Typography>
+        <Typography {...typographyProps}>
+          {linkedInLinkUrl.host + linkedInLinkUrl.pathname}
+        </Typography>
       </IconBox>
       <Typography {...typographyProps}>|</Typography>
-      <IconBox Icon={AiOutlineMail} {...middleIconBoxProps}>
+      <IconBox Icon={AiOutlineMail} {...rightIconBoxProps}>
         <Typography {...typographyProps}>{email}</Typography>
       </IconBox>
       <br />

@@ -1,15 +1,18 @@
 import { Box, BoxProps, Card, CardProps } from "@mui/material";
 import React from "react";
 
-import { Education as EducationInterface } from "../data/cv.types";
-import cvData from "../data/cv-data";
+import { Education as IEducation } from "../data/cv.types";
 import EducationCardContent, {
   EducationCardContentProps,
 } from "./cards/education-card-content";
 
-const education: EducationInterface[] = cvData.education;
+export type EducationProps = BoxProps & {
+  educations: IEducation[];
+};
 
-const Education = (props: BoxProps) => {
+const Education = (props: EducationProps) => {
+  const { educations, ...otherProps } = props;
+
   const cardProps: CardProps = {
     sx: {
       backgroundColor: "primary.light",
@@ -23,19 +26,19 @@ const Education = (props: BoxProps) => {
   };
 
   const educationCardContentProps: EducationCardContentProps = {
-    education,
+    educations,
     sx: {
       alignItems: "center",
       display: "flex",
       flexDirection: "column",
-      padding: "0.1rem",
+      margin: "0.5rem",
     },
   };
 
   return (
-    <Box {...props}>
+    <Box {...otherProps}>
       <Card {...cardProps}>
-        <EducationCardContent {...educationCardContentProps} />
+        <EducationCardContent {...educationCardContentProps}/>
       </Card>
     </Box>
   );

@@ -1,12 +1,10 @@
 import { Card, CardProps } from "@mui/material";
 import React, { ElementType } from "react";
 
-export type GenericCardProps = CardProps & {};
+export type GenericCardProps = CardProps;
 
 const GenericCard: ElementType = (props: GenericCardProps) => {
-  const { sx, ...otherProps } = props;
-
-  return <Card {...otherProps} />;
+  return <Card {...props} />;
 };
 
 export default GenericCard;

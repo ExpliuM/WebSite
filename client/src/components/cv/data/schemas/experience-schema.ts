@@ -24,7 +24,6 @@ const experienceSchema = {
       },
       additionalProperties: true,
     },
-    fullText: { type: "string" },
   },
   required: [
     "companyName",
@@ -34,7 +33,6 @@ const experienceSchema = {
     "skills",
     "generalDescription",
     "projectsAndTasks",
-    "fullText",
   ],
   additionalProperties: false,
 };

@@ -1,14 +1,11 @@
 import React from "react";
 import { Button, Box, Grid, BoxProps, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 // TODO: To make projects page and to put Tic Tac Toe and Components under it
 const buttonsData: ReadonlyArray<{ text: string; href: string }> = [
-  // { text: "Main", href: "/" },
   { text: "CV", href: "/cv" },
-  // { text: "Components", href: "/Components" },
   { text: "Tic Tac Toe", href: "/tic-tac-toe" },
-  // { text: "About", href: "/about" },
-  // { text: "Settings", href: "/Settings" },
 ];
 
 const Header = (props: BoxProps) => (
@@ -16,11 +13,16 @@ const Header = (props: BoxProps) => (
     <Grid container justifyContent="center" spacing={0.5}>
       {buttonsData.map(({ text, href }) => (
         <Grid item key={text}>
-          <Button sx={{backgroundColor:"primary.light"}} variant="contained" href={href}>
-            <Typography color="text.primary" variant="subtitle1">
-              {text}
-            </Typography>
-          </Button>
+          <Link to={href}>
+            <Button
+              sx={{ backgroundColor: "primary.light" }}
+              variant="contained"
+            >
+              <Typography color="text.primary" variant="subtitle1">
+                {text}
+              </Typography>
+            </Button>
+          </Link>
         </Grid>
       ))}
     </Grid>

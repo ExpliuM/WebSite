@@ -4,15 +4,23 @@ import React from "react";
 
 import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
 
-const Databases = (props: IconBoxProps) => (
-  <IconBox Icon={BsDatabase} {...props}>
-    <Typography color="text.primary" variant="subtitle2">
-      Databases:
-    </Typography>
-    <Typography color="text.primary">
-      Neo4J, Datastore, Firebase, PostgreSQL.
-    </Typography>
-  </IconBox>
-);
+export type DatabasesProps = IconBoxProps & {
+  databases: string[];
+};
+
+const Databases = (props: DatabasesProps) => {
+  const { databases ,...otherProps} = props;
+
+  return (
+    <IconBox Icon={BsDatabase} {...otherProps}>
+      <Typography color="text.primary" variant="subtitle1">
+        Databases:
+      </Typography>
+      <Typography color="text.primary" variant="body1">
+        {databases.join(", ")}
+      </Typography>
+    </IconBox>
+  );
+};
 
 export default Databases;

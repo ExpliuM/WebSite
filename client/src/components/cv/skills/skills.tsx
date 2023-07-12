@@ -2,16 +2,32 @@ import { Box, BoxProps } from "@mui/material";
 import React from "react";
 
 import { IconBoxProps } from "../../icon-box/icon-box";
+import { Skills as ISkills } from "../data/cv.types";
 import APIs from "./sub-catagories/apis";
 import Clouds from "./sub-catagories/cloud";
 import Databases from "./sub-catagories/databases";
 import Environments from "./sub-catagories/environment";
 import OperationSystems from "./sub-catagories/operation-systems";
 import ProgrammingLanguages from "./sub-catagories/programming-languages";
-import Title from "./title";
+import SkillsTitle from "./skills-title";
 import Tools from "./sub-catagories/tools";
 
-const Skills = (props: BoxProps) => {
+export type SkillsProps = BoxProps & {
+  skills: ISkills;
+};
+
+const Skills = (props: SkillsProps) => {
+  const { skills } = props;
+  const {
+    apis,
+    clouds,
+    databases,
+    environments,
+    operationSystems,
+    programmingLanguages,
+    tools,
+  } = skills;
+
   const skillProps: IconBoxProps = {
     alignItems: "center",
     display: "flex",
@@ -20,30 +36,40 @@ const Skills = (props: BoxProps) => {
     width: "100%",
   };
 
+  const skillsTitleProps: BoxProps = {
+    alignItems: "center",
+    display: "flex",
+    gap: "0.5rem",
+    justifyContent: "center",
+    width: "100%",
+  };
+
   return (
     <Box {...props}>
-      <Title
-        alignItems="center"
-        display="flex"
-        gap="0.5rem"
-        justifyContent="center"
-        width="100%"
-      >
-        Skills
-      </Title>
+      <SkillsTitle {...skillsTitleProps} />
       <Box display="flex" flexDirection="row" gap="3rem">
         <Box display="flex" flexDirection="column">
-          <ProgrammingLanguages {...skillProps} />
-          <Environments {...skillProps} />
-          <OperationSystems {...skillProps} />
+          <ProgrammingLanguages
+            programmingLanguages={programmingLanguages}
+            {...skillProps}
+          />
+          <Environments environments={environments} {...skillProps} />
+          <OperationSystems
+            operationSystems={operationSystems}
+            {...skillProps}
+          />
         </Box>
         <Box display="flex" flexDirection="column">
-          <APIs {...skillProps} />
-          <Tools {...skillProps} />
-          <Clouds {...skillProps} />
+          <APIs apis={apis} {...skillProps} />
+          <Clouds clouds={clouds} {...skillProps} />
+          <Tools tools={tools} {...skillProps} />
         </Box>
       </Box>
-      <Databases {...skillProps} justifyContent="center" />
+      <Databases
+        databases={databases}
+        {...skillProps}
+        justifyContent="center"
+      />
     </Box>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, BoxProps, Button, Typography } from "@mui/material";
+import { Box, BoxProps } from "@mui/material";
 import { Fireworks } from "@fireworks-js/react";
 import { useSelector } from "react-redux";
 import React from "react";
@@ -26,7 +26,7 @@ const TicTacToe = (props: BoxProps) => {
           }}
         />
       )}
-      <Board zIndex="0"/>
+      <Board zIndex="0" />
       <Box marginTop="1rem" marginBottom="1rem" zIndex="1">
         <ResetButton />
       </Box>

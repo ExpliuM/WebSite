@@ -12,18 +12,19 @@ import {
 } from "react-icons/hi";
 import { IconBaseProps } from "react-icons/lib";
 import React, { ElementType, useState } from "react";
+import { PropsOf } from "@emotion/react";
 
 export type Options = {
   text?: string;
   Component?: ElementType;
-  componentProps?: any;
+  componentProps?: PropsOf<ElementType>;
 };
 
 export type ArrowedHeaderEventHandler = (selected: number) => void;
 
 export type ArrowedHeaderProps = Omit<BoxProps, "onClick"> & {
   dataArray: Array<Options>;
-  iconProps: IconBaseProps;
+  iconProps?: IconBaseProps;
   onClick?: ArrowedHeaderEventHandler;
   value?: number | undefined;
 };
@@ -58,9 +59,7 @@ const ArrowedHeader = (props: ArrowedHeaderProps) => {
   };
 
   return (
-    <Box
-      {...otherProps}
-    >
+    <Box {...otherProps}>
       <IconButton aria-label="left" onClick={handleLeftArrowClick}>
         <HiOutlineArrowCircleLeft {...iconProps} />
       </IconButton>

@@ -1,23 +1,26 @@
 import { Box, BoxProps } from "@mui/material";
 import React from "react";
 
-import { GeneralInformation as GeneralInformationInterface } from "../data/cv.types";
-import cvData from "../../cv/data/cv-data";
 import GeneralInformationHeader from "./general-information-header";
 import SubTitle from "../subtitle";
+import { GeneralInformation as IGeneralInformation } from "../data/cv.types";
 
-const generalInformation: GeneralInformationInterface =
-  cvData.generalInformation;
+export type GeneralInformationProps = BoxProps & {
+  generalInformation: IGeneralInformation;
+};
 
-const GeneralInformation = (props: BoxProps) => (
-  <Box {...props}>
-    <SubTitle align="center">General Information</SubTitle>
-    <GeneralInformationHeader
-      generalInformation={generalInformation}
-      display="flex"
-      flexDirection="row"
-    />
-  </Box>
-);
+const GeneralInformation = (props: GeneralInformationProps) => {
+  const { generalInformation, ...otherProps } = props;
+  return (
+    <Box {...otherProps}>
+      <SubTitle align="center">General Information</SubTitle>
+      <GeneralInformationHeader
+        generalInformation={generalInformation}
+        display="flex"
+        flexDirection="row"
+      />
+    </Box>
+  );
+};
 
 export default GeneralInformation;

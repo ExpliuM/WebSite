@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import Avatar, { AvatarProps } from "@mui/material/Avatar";
 import CardHeader, { CardHeaderProps } from "@mui/material/CardHeader";
 import React, {

@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build-storybook": "storybook build",
     "build": "tsc && vite build",
     "dev": "vite",
+    "eslint": "eslint .",
     "serve": "vite preview",
     "start": "node",
     "storybook": "storybook dev -p 6006",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-storybook": "storybook build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +36,6 @@
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "storybook": "^7.0.20",
-    "typescript": "^4.9.5",
     "vite": "^4.1.4"
   },
   "devDependencies": {
@@ -50,7 +50,11 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
     "prop-types": "^15.8.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^3.1.1"
   }
 }

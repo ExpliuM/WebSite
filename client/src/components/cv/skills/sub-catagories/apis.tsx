@@ -4,13 +4,21 @@ import React from "react";
 
 import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
 
-const APIs = (props: IconBoxProps) => {
+export type APIsProps = IconBoxProps & {
+  apis: string[];
+};
+
+const APIs = (props: APIsProps) => {
+  const { apis, ...otherProps} = props;
+
   return (
-    <IconBox Icon={AiOutlineApi} {...props}>
-      <Typography color="text.primary" variant="subtitle2">
+    <IconBox Icon={AiOutlineApi} {...otherProps}>
+      <Typography color="text.primary" variant="subtitle1">
         API's:
       </Typography>
-      <Typography color="text.primary">React,NodeJS, Redux</Typography>
+      <Typography color="text.primary" variant="body1">
+        {apis.join(", ")}
+      </Typography>
     </IconBox>
   );
 };

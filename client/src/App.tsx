@@ -1,19 +1,23 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-
+import { Box, BoxProps, ThemeProvider } from "@mui/material";
 import { CV, NoMatch, TicTacToe } from "./pages";
-import { Box, ThemeProvider } from "@mui/material";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
+import { Route, Routes } from "react-router-dom";
+import React from "react";
 
+import { store } from "./app/store";
 import Header from "./components/header/header";
 import theme from "./theme";
 
 const App = () => {
+  const boxProps: BoxProps = {
+    color: "primary.main",
+    height: "100vh",
+  };
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Box color="primary.main" height="100vh">
+        <Box {...boxProps}>
           <Header
             bgcolor="primary.main"
             display="flex"

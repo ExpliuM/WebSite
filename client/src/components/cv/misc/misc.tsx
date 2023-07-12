@@ -1,15 +1,18 @@
 import { Box, BoxProps, Card, CardProps } from "@mui/material";
 import React from "react";
 
-import { Misc as MiscInterface } from "../data/cv.types";
-import cvData from "../data/cv-data";
+import { Misc as IMisc } from "../data/cv.types";
 import MiscCardContent, {
   MiscCardContentProps,
 } from "./cards/misc-card-content";
 
-const misc: MiscInterface = cvData.misc;
+export type MiscProps = BoxProps & {
+  misc: IMisc;
+};
 
-const Misc = (props: BoxProps) => {
+const Misc = (props: MiscProps) => {
+  const { misc, ...otherProps } = props;
+
   const cardProps: CardProps = {
     sx: {
       backgroundColor: "primary.light",
@@ -33,7 +36,7 @@ const Misc = (props: BoxProps) => {
   };
 
   return (
-    <Box {...props}>
+    <Box {...otherProps}>
       <Card {...cardProps}>
         <MiscCardContent {...miscCardContentProps} />
       </Card>

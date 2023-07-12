@@ -6,17 +6,18 @@ export type TitleProps = BoxProps & {
   typographyProps?: TypographyProps;
 };
 
-const Title = (props: TitleProps) => {
-  const { children, typographyProps, ...otherProps } = props;
+const SkillsTitle = (props: TitleProps) => {
+  const { typographyProps, ...otherProps } = props;
 
+  // TODO: use IconBox here
   return (
     <Box {...otherProps}>
-      <GiSkills />
+      <GiSkills size="1.5rem" />
       <Typography color="text.primary" variant="h6" {...typographyProps}>
-        {children}
+        Skills
       </Typography>
     </Box>
   );
 };
 
-export default Title;
+export default SkillsTitle;

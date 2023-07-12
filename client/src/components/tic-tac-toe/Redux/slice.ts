@@ -3,11 +3,11 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import Game, { GameState } from "../Functions/game";
 import Board from "../Functions/board";
 
-interface stateInterface {
+interface IState {
   gameState: GameState;
 }
 
-const initialState: stateInterface = {
+const initialState: IState = {
   gameState: Game.getInitGameState(),
 };
 
@@ -16,13 +16,13 @@ export const Slice = createSlice({
   initialState,
   reducers: {
     playTurn: (
-      state: stateInterface,
+      state: IState,
       action: PayloadAction<{ xIndex: number; yIndex: number }>
     ) => {
       const { xIndex, yIndex } = action.payload;
       Game.playTurn(state.gameState, xIndex, yIndex);
     },
-    reset: (state: stateInterface) => {
+    reset: (state: IState) => {
       Game.reset(state.gameState);
     },
   },
@@ -30,11 +30,11 @@ export const Slice = createSlice({
 
 export const { playTurn, reset } = Slice.actions;
 
-export const selectBoard = (state: { ticTacToe: stateInterface }) => {
+export const selectBoard = (state: { ticTacToe: IState }) => {
   return Board.getBoard(state.ticTacToe.gameState.boardState);
 };
 
-export const selectWinner = (state: { ticTacToe: stateInterface }) => {
+export const selectWinner = (state: { ticTacToe: IState }) => {
   return Board.getWinner(state.ticTacToe.gameState.boardState);
 };
 

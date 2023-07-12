@@ -55,8 +55,8 @@ export interface Misc {
 
 
 export interface CV {
-  education: Education[];
-  experience: Experience[];
+  educations: Education[];
+  experiences: Experience[];
   generalInformation: GeneralInformation;
   misc: Misc;
   name: string;
