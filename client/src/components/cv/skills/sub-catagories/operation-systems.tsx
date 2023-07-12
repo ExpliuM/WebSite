@@ -16,7 +16,7 @@ const OperationSystems = (props: OperationSystemsProps) => {
         Operation Systems:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {operationSystems.join(", ")}
+        {operationSystems.join(", ")}.
       </Typography>
     </IconBox>
   );

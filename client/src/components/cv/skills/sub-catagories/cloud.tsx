@@ -17,7 +17,7 @@ const Clouds = (props: CloudsProps) => {
         Clouds:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {clouds.join(", ")}
+        {clouds.join(", ")}.
       </Typography>
     </IconBox>
   );

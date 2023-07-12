@@ -16,7 +16,7 @@ const ProgrammingLanguages = (props: ProgrammingLanguagesProps) => {
         Programming Languages:
       </Typography>{" "}
       <Typography color="text.primary" variant="body1">
-        {programmingLanguages.join(", ")}
+        {programmingLanguages.join(", ")}.
       </Typography>
     </IconBox>
   );

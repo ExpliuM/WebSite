@@ -17,7 +17,7 @@ const APIs = (props: APIsProps) => {
         API's:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {apis.join(", ")}
+        {apis.join(", ")}.
       </Typography>
     </IconBox>
   );

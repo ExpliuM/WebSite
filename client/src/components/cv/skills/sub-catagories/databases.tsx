@@ -17,7 +17,7 @@ const Databases = (props: DatabasesProps) => {
         Databases:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {databases.join(", ")}
+        {databases.join(", ")}.
       </Typography>
     </IconBox>
   );

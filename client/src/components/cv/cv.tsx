@@ -84,11 +84,16 @@ const CV = (props: BoxProps) => {
       alignItems="center"
       display="flex"
       flexDirection="column"
-      gap="0.5rem"
+      gap="0.75rem"
       {...props}
     >
-      <Title>{name}</Title>
-      <GeneralInformation generalInformation={generalInformation} />
+      <Title paddingTop="1rem">{name}</Title>
+      <GeneralInformation
+        display="flex"
+        flexDirection="column"
+        gap="0.25rem"
+        generalInformation={generalInformation}
+      />
       <Skills
         display="flex"
         flexDirection="column"

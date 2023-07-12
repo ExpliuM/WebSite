@@ -17,7 +17,8 @@ export type SkillsProps = BoxProps & {
 };
 
 const Skills = (props: SkillsProps) => {
-  const { skills } = props;
+  const { skills, ...otherProps } = props;
+
   const {
     apis,
     clouds,
@@ -34,6 +35,9 @@ const Skills = (props: SkillsProps) => {
     gap: "0.5rem",
     justifyContent: "left",
     width: "100%",
+    iconProps: {
+      size: "1.5rem",
+    },
   };
 
   const skillsTitleProps: BoxProps = {
@@ -45,7 +49,7 @@ const Skills = (props: SkillsProps) => {
   };
 
   return (
-    <Box {...props}>
+    <Box {...otherProps}>
       <SkillsTitle {...skillsTitleProps} />
       <Box display="flex" flexDirection="row" gap="3rem">
         <Box display="flex" flexDirection="column">

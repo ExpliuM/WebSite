@@ -16,7 +16,7 @@ const Environments = (props: EnvironmentsProps) => {
         Environments:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {environments.join(", ")}
+        {environments.join(", ")}.
       </Typography>
     </IconBox>
   );

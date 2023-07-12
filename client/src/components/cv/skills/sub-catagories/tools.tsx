@@ -15,7 +15,7 @@ const Tools = (props: ToolsProps) => {
         Tools:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {tools.join(", ")}
+        {tools.join(", ")}.
       </Typography>
     </IconBox>
   );

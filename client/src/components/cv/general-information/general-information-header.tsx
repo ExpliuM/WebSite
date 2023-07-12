@@ -26,6 +26,9 @@ const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
     display: "flex",
     flexDirection: "row",
     gap: "0.5rem",
+    iconProps: {
+      size: "1.5rem",
+    },
   };
 
   const leftIconBoxProps: IconBoxProps = {
