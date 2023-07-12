@@ -2,14 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   client: link:client
+  server: link:server
 
 dependencies:
   client: link:client
-
-packages:
-  # all packages in direct subdirs of packages/
-  - "packages/*"
-  # all packages in subdirs of components/
-  - "components/**"
-  # exclude packages that are inside test directories
-  - "!**/test/**"
+  server: link:server

@@ -3,7 +3,7 @@
 My own website.
 
 ## Screenshot
-![WebSite](./documentation/screenshots/cv-page.png "Optional title")
+![WebSite screenshot - cv page](./documentation/screenshots/cv-page.png "WebSite screenshot - cv page")
 
 ## Prepare
 

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "client": "link:client"
+    "client": "link:client",
+    "server": "link:server"
   }
 }

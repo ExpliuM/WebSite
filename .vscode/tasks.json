@@ -1,28 +1,35 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "shell",
-			"command": "pnpm -F client dev",
-			"problemMatcher": [],
-			"label": "pnpm: client dev",
-			"detail": "vite"
-		},
-		{
-			"type": "shell",
-			"command": "pnpm -F client build",
-			"group": "build",
-			"problemMatcher": [],
-			"label": "pnpm: client build",
-			"detail": "client tsc && vite build"
-		},
-		{
-			"type": "shell",
-			"command": "pnpm -F client run storybook",
-			"group": "build",
-			"problemMatcher": [],
-			"label": "pnpm: client storybook",
-			"detail": "client storybook"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "pnpm -F client dev",
+      "problemMatcher": [],
+      "label": "pnpm: client dev",
+      "detail": "vite"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F client build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "pnpm: client build",
+      "detail": "client tsc && vite build"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F client run storybook",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "pnpm: client storybook",
+      "detail": "client storybook"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F server start:debug",
+      "problemMatcher": [],
+      "label": "pnpm: server debug",
+      "detail": ""
+    }
+  ]
 }
