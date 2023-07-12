@@ -1,8 +1,9 @@
 # Explium - Website
 ## About
+My own website.
 
-Just a small side project.
-<!-- TODO: Add screenshot from the website -->
+## Screenshot
+![WebSite](./documentation/screenshots/cv-page.png "Optional title")
 
 ## Prepare
 
