@@ -1,0 +1,7 @@
+###
+GET http://127.0.0.1:4000/view-counter
+###
+GET http://127.0.0.1:4000/view-counters
+###
+POST http://127.0.0.1:4000/update-view-counter
+###

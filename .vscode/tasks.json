@@ -30,6 +30,20 @@
       "problemMatcher": [],
       "label": "pnpm: server debug",
       "detail": ""
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F server postgres:start",
+      "problemMatcher": [],
+      "label": "pnpm: server postgres start",
+      "detail": ""
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F server postgres:stop",
+      "problemMatcher": [],
+      "label": "pnpm: server postgres stop",
+      "detail": ""
     }
   ]
 }
