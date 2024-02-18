@@ -26,16 +26,14 @@ const App = () => {
         <Box {...boxProps}>
           <Header {...headerProps} />
           <Routes>
-            <Route path="/">
-              <Route index element={<CV />} />
-              <Route path="cv" element={<CV />} />
-              <Route path="tic-tac-toe" element={<TicTacToe />} />
-              <Route path="WevSite" element={<CV />} />
-              {/* Using path="*" means "match anything", so this route
+            <Route index element={<CV />} />
+            <Route path="/" element={<CV />}/>
+            <Route path="cv" element={<CV />} />
+            <Route path="tic-tac-toe" element={<TicTacToe />} />
+            {/* Using path="*" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
               routes for. */}
-              <Route path="*" element={<NoMatch />} />
-            </Route>
+            <Route path="*" element={<NoMatch />} />
           </Routes>
         </Box>
       </ThemeProvider>
