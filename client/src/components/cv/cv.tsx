@@ -43,14 +43,17 @@ const headerButtonProps: {
 
 const headerData: Array<Options> = [
   {
+    text: 'Experience',
     Component: ExperienceHeaderButton,
     componentProps: headerButtonProps,
   },
   {
+    text: 'Education',
     Component: EducationHeaderButton,
     componentProps: headerButtonProps,
   },
   {
+    text: 'Misc',
     Component: MiscHeaderButton,
     componentProps: headerButtonProps,
   },
@@ -126,13 +129,16 @@ const CV = (props: BoxProps) => {
     setSelected(selected);
   };
 
-  const selectedComponentData = selectableComponentsData[selected];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const SelectedComponent = selectedComponentData.Component as (
+  const selectedName = headerData[selected].text;
+  const selectedComponentData = selectableComponentsData.find(
+    (componentData) => componentData.name == selectedName,
+  );
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  const SelectedComponent = selectedComponentData?.Component as (
     ...args: any[]
   ) => React.JSX.Element;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const selectedProps = selectedComponentData.componentProps as any;
+  const selectedProps = selectedComponentData?.componentProps as any;
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   return (
     <Box

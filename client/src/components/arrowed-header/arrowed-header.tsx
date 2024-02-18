@@ -10,14 +10,14 @@ import {
   HiOutlineArrowCircleLeft,
   HiOutlineArrowCircleRight,
 } from 'react-icons/hi';
-import { IconBaseProps } from 'react-icons/lib';
 import { ElementType, useState } from 'react';
+import { IconBaseProps } from 'react-icons/lib';
 import { PropsOf } from '@emotion/react';
 
 export type Options = {
-  text?: string;
-  Component?: ElementType;
-  componentProps?: PropsOf<ElementType>;
+  text: string;
+  Component: ElementType;
+  componentProps: PropsOf<ElementType>;
 };
 
 export type ArrowedHeaderEventHandler = (selected: number) => void;
