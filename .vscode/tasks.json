@@ -102,6 +102,13 @@
       "args": ["-F", "client", "host"],
       "label": "client host",
       "detail": "http-server dist/"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["-F", "client", "run","deploy"],
+      "label": "Client deploy",
+      "detail": "Client deploy"
     }
   ]
 }
