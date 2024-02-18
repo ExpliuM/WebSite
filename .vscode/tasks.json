@@ -60,13 +60,6 @@
       "label": "Postgres stop",
       "detail": ""
     },
-    // {
-    //   "type": "pnpm",
-    //   "script": "seed:run",
-    //   "path": "server",
-    //   "label": "npm: seed:run - server",
-    //   "detail": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
-    // },
     {
       "type": "shell",
       "command": "pnpm",
@@ -102,6 +95,13 @@
       "args": ["-w", "prettier:format"],
       "label": "Prettier format",
       "detail": "Prettier format"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["-F", "client", "host"],
+      "label": "client host",
+      "detail": "http-server dist/"
     }
   ]
 }
