@@ -4,52 +4,46 @@
     {
       "type": "shell",
       "command": "pwd",
-      "label": "run dev",
-      "dependsOn": ["pnpm: client dev", "pnpm: server debug"]
+      "label": "Develop",
+      "dependsOn": ["Client dev", "Server debug"]
     },
     {
       "type": "shell",
       "command": "pnpm -F client dev",
-      "problemMatcher": [],
-      "label": "pnpm: client dev",
+      "label": "Client dev",
       "dependsOn": ["pnpm: install"],
-      "detail": "vite"
+      "detail": "Client dev - vite"
     },
     {
       "type": "shell",
       "command": "pnpm install",
-      "problemMatcher": [],
-      "label": "pnpm: install",
+      "label": "pnpm install",
       "dependsOn": [""]
     },
     {
       "type": "shell",
       "command": "pnpm -F client build",
       "group": "build",
-      "problemMatcher": [],
-      "label": "pnpm: client build",
+      "label": "Client build",
       "detail": "client tsc && vite build"
     },
     {
       "type": "shell",
       "command": "pnpm -F client run storybook",
       "group": "build",
-      "problemMatcher": [],
-      "label": "pnpm: client storybook",
-      "detail": "client storybook"
+      "label": "Storybook",
+      "detail": "Storybook"
     },
     {
       "type": "shell",
       "command": "pnpm -F client install",
       "group": "build",
-      "problemMatcher": [],
-      "label": "pnpm: client install",
-      "detail": "client install"
+      "label": "Client install",
+      "detail": "Client install"
     },
     {
       "type": "shell",
       "command": "pnpm -F server start:debug",
-      "problemMatcher": [],
       "label": "pnpm: server debug",
       "detail": "",
       "dependsOn": ["pnpm: install"]
@@ -57,30 +51,27 @@
     {
       "type": "shell",
       "command": "pnpm -F server postgres:start",
-      "problemMatcher": [],
       "label": "Postgres start",
       "detail": ""
     },
     {
       "type": "shell",
       "command": "pnpm -F server postgres:stop",
-      "problemMatcher": [],
       "label": "Postgres stop",
       "detail": ""
     },
-    {
-      "type": "npm",
-      "script": "seed:run",
-      "path": "server",
-      "problemMatcher": [],
-      "label": "npm: seed:run - server",
-      "detail": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
-    },
+    // {
+    //   "type": "pnpm",
+    //   "script": "seed:run",
+    //   "path": "server",
+    //   "label": "npm: seed:run - server",
+    //   "detail": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
+    // },
     {
       "type": "shell",
-      "command": "pnpm -F server install",
+      "command": "pnpm",
+      "args": ["-F", "server", "install"],
       "group": "build",
-      "problemMatcher": [],
       "label": "Server install",
       "detail": "Server install"
     },
@@ -88,9 +79,29 @@
       "type": "shell",
       "command": "pnpm -F server-seed run seed",
       "group": "build",
-      "problemMatcher": [],
       "label": "Seed server",
       "detail": "Seed server"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["esling"],
+      "label": "ESLint",
+      "detail": "ESLint ."
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["prettier:check"],
+      "label": "Prettier check",
+      "detail": "Prettier check ."
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["run", "prettier:format"],
+      "label": "Prettier format",
+      "detail": "Prettier format"
     }
   ]
 }
