@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build-storybook": "storybook build",
     "build": "tsc && vite build",
+    "clean": "rm -rf dist",
     "dev": "vite",
-    "eslint": "eslint .",
     "serve": "vite preview",
     "start": "node",
+    "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
