@@ -1,5 +1,5 @@
 import CardContent, { CardContentProps } from '@mui/material/CardContent';
-import React, { ElementType } from 'react';
+import { ElementType } from 'react';
 import Typography from '@mui/material/Typography';
 
 import { IExperience } from '../../data/cv.types';

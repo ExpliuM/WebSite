@@ -5,7 +5,6 @@ import {
   AiOutlineMail,
 } from 'react-icons/ai';
 import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
-import React from 'react';
 
 import { IGeneralInformation } from '../data/cv.types';
 import IconBox, { IconBoxProps } from '../../icon-box/icon-box';

@@ -1,10 +1,6 @@
 import Avatar, { AvatarProps } from '@mui/material/Avatar';
 import CardHeader, { CardHeaderProps } from '@mui/material/CardHeader';
-import React, {
-  DetailedHTMLProps,
-  ElementType,
-  ImgHTMLAttributes,
-} from 'react';
+import { DetailedHTMLProps, ElementType, ImgHTMLAttributes } from 'react';
 
 const LOGO_HEIGHT = '30px';
 const LOGO_WIDTH = '30px';

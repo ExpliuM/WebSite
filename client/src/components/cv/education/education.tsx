@@ -1,5 +1,4 @@
 import { Box, BoxProps, Card, CardProps } from '@mui/material';
-import React from 'react';
 
 import { IEducation } from '../data/cv.types';
 import EducationCardContent, {

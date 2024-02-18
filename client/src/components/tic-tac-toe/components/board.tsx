@@ -8,7 +8,6 @@ import {
   Typography,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
 
 import { playTurn, selectBoard } from '../Redux/slice';
 import { X_SIZE, Y_SIZE } from '../Functions/constants';

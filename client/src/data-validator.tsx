@@ -5,7 +5,7 @@ class DataValidator<T> {
   private ajv: Ajv;
   private validate: ValidateFunction<T>;
 
-  constructor(private schema: JSONSchemaType<T>) {
+  constructor(schema: JSONSchemaType<T>) {
     this.ajv = new Ajv();
 
     const formatNames: FormatName[] = ['email', 'uri'];

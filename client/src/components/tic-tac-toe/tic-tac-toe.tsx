@@ -1,7 +1,6 @@
 import { Box, BoxProps } from '@mui/material';
 import { Fireworks } from '@fireworks-js/react';
 import { useSelector } from 'react-redux';
-import React from 'react';
 
 import { selectWinner } from './Redux/slice';
 import Board from './components/board';

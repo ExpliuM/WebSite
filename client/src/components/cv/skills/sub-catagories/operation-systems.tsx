@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import { TfiMicrosoft } from 'react-icons/tfi';
-import React from 'react';
 
 import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
 

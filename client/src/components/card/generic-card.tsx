@@ -1,5 +1,5 @@
 import { Card, CardProps } from '@mui/material';
-import React, { ElementType } from 'react';
+import { ElementType } from 'react';
 
 export type GenericCardProps = CardProps;
 

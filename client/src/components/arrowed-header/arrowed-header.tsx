@@ -11,7 +11,7 @@ import {
   HiOutlineArrowCircleRight,
 } from 'react-icons/hi';
 import { IconBaseProps } from 'react-icons/lib';
-import React, { ElementType, useState } from 'react';
+import { ElementType, useState } from 'react';
 import { PropsOf } from '@emotion/react';
 
 export type Options = {

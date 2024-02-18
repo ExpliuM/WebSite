@@ -39,6 +39,8 @@
     "ms-vscode.test-adapter-converter",
     "redhat.vscode-xml",
     "redhat.vscode-yaml",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv"
   ]
 }

@@ -85,21 +85,21 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["esling"],
+      "args": ["-w", "eslint"],
       "label": "ESLint",
       "detail": "ESLint ."
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["prettier:check"],
+      "args": ["-w", "prettier:check"],
       "label": "Prettier check",
       "detail": "Prettier check ."
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["run", "prettier:format"],
+      "args": ["-w", "prettier:format"],
       "label": "Prettier format",
       "detail": "Prettier format"
     }

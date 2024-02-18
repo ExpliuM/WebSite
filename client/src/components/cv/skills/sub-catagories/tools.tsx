@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import React from 'react';
+
 import { BsTools } from 'react-icons/bs';
 import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
 

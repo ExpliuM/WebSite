@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { default as TicTacToeComponent } from '../components/tic-tac-toe/tic-tac-toe';
 

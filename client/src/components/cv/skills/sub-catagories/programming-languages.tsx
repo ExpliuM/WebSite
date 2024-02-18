@@ -1,7 +1,6 @@
 import { BiCode } from 'react-icons/bi';
 import { Typography } from '@mui/material';
 import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
-import React from 'react';
 
 export type ProgrammingLanguagesProps = IconBoxProps & {
   programmingLanguages: string[];

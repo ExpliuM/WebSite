@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import CardContent, { CardContentProps } from '@mui/material/CardContent';
-import React, { ElementType } from 'react';
+import { ElementType } from 'react';
 import Typography from '@mui/material/Typography';
 
 import { IEducation } from '../../data/cv.types';

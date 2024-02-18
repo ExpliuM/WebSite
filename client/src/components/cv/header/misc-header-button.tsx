@@ -1,6 +1,5 @@
 import { Typography, TypographyProps } from '@mui/material';
 import { VscSymbolMisc } from 'react-icons/vsc';
-import React from 'react';
 
 import IconBox, { IconBoxProps } from '../../icon-box/icon-box';
 

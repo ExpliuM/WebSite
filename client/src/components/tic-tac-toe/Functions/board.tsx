@@ -43,11 +43,11 @@ const setCell = (
 
   checkCol(boardState, xIndex);
   checkRow(boardState, yIndex);
-  if (isDiag1Affected(boardState, xIndex, yIndex)) {
+  if (isDiag1Affected(xIndex, yIndex)) {
     checkDiag1(boardState);
   }
 
-  if (isDiag2Affected(boardState, xIndex, yIndex)) {
+  if (isDiag2Affected(xIndex, yIndex)) {
     checkDiag2(boardState);
   }
 };
@@ -96,19 +96,11 @@ const checkRow = (boardState: BoardState, yIndex: number) => {
   }
 };
 
-const isDiag1Affected = (
-  boardState: BoardState,
-  xIndex: number,
-  yIndex: number,
-): boolean => {
+const isDiag1Affected = (xIndex: number, yIndex: number): boolean => {
   return xIndex == yIndex;
 };
 
-const isDiag2Affected = (
-  boardState: BoardState,
-  xIndex: number,
-  yIndex: number,
-): boolean => {
+const isDiag2Affected = (xIndex: number, yIndex: number): boolean => {
   return xIndex == (yIndex + 2) % 3;
 };
 

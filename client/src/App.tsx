@@ -2,7 +2,6 @@ import { Box, BoxProps, ThemeProvider } from '@mui/material';
 import { CV, NoMatch, TicTacToe } from './pages';
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import React from 'react';
 
 import { store } from './app/store';
 import Header from './components/header/header';

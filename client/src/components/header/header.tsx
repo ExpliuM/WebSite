@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Box, Grid, BoxProps, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 

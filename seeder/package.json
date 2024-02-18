@@ -9,7 +9,7 @@
     "seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
   },
   "devDependencies": {
-    "typeorm": "^0.3.17",
+    "typeorm": "^0.3.20",
     "typeorm-seeding": "^1.6.1",
     "typescript": "^5.1.6"
   }

@@ -1,6 +1,6 @@
 import { PropsOf } from '@emotion/react';
 import { Box, BoxProps, Card } from '@mui/material';
-import React, { ElementType, Fragment, useState } from 'react';
+import { ElementType, Fragment, useState } from 'react';
 
 export type CollapsedCardData = {
   CardContent: ElementType;
