@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
+  "homepage": "https://ExpliuM.github.io/WebSite",
   "scripts": {
     "build": "tsc && vite build",
     "clean": "rm -rf dist",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
+    "predeploy": "pnpm build",
     "serve": "vite preview",
     "start": "node",
     "storybook:build": "storybook build",
