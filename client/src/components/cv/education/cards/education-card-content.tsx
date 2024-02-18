@@ -3,11 +3,11 @@ import CardContent, { CardContentProps } from '@mui/material/CardContent';
 import React, { ElementType } from 'react';
 import Typography from '@mui/material/Typography';
 
-import { Education } from '../../data/cv.types';
+import { IEducation } from '../../data/cv.types';
 import { Box } from '@mui/material';
 
 export type EducationCardContentProps = CardContentProps & {
-  educations: Education[];
+  educations?: IEducation[];
 };
 
 const EducationCardContent: ElementType = (

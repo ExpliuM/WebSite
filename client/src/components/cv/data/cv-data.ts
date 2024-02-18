@@ -1,6 +1,6 @@
-import { CV } from './cv.types';
+import { ICV } from './cv.types';
 import cvData from './cv.json';
 
-const cv: CV = cvData;
+const cv: ICV = cvData;
 
 export default cv;

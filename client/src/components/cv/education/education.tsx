@@ -1,7 +1,7 @@
 import { Box, BoxProps, Card, CardProps } from '@mui/material';
 import React from 'react';
 
-import { Education as IEducation } from '../data/cv.types';
+import { IEducation } from '../data/cv.types';
 import EducationCardContent, {
   EducationCardContentProps,
 } from './cards/education-card-content';
@@ -9,6 +9,8 @@ import EducationCardContent, {
 export type EducationProps = BoxProps & {
   educations: IEducation[];
 };
+
+export type EducationComponent = (props: EducationProps) => React.JSX.Element;
 
 const Education = (props: EducationProps) => {
   const { educations, ...otherProps } = props;

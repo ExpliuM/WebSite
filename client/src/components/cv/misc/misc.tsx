@@ -1,7 +1,7 @@
 import { Box, BoxProps, Card, CardProps } from '@mui/material';
 import React from 'react';
 
-import { Misc as IMisc } from '../data/cv.types';
+import { IMisc } from '../data/cv.types';
 import MiscCardContent, {
   MiscCardContentProps,
 } from './cards/misc-card-content';
@@ -10,7 +10,9 @@ export type MiscProps = BoxProps & {
   misc: IMisc;
 };
 
-const Misc = (props: MiscProps) => {
+export type MiscComponent = (props: MiscProps) => React.JSX.Element;
+
+const Misc: MiscComponent = (props: MiscProps) => {
   const { misc, ...otherProps } = props;
 
   const cardProps: CardProps = {

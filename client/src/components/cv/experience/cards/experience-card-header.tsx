@@ -1,13 +1,13 @@
 import React, { ElementType } from 'react';
 
-import { Experience } from '../../data/cv.types';
+import { IExperience } from '../../data/cv.types';
 
 import GenericCardHeader, {
   GenericCardHeaderProps,
 } from '../../../card/generic-card-header/generic-card-header';
 
 type ExperienceCardHeaderProps = GenericCardHeaderProps & {
-  experience: Experience;
+  experience: IExperience;
   Logo: string;
 };
 const ExperienceCardHeader: ElementType = (

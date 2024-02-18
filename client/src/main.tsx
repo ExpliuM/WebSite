@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
-import { CV } from './components/cv/data/cv.types';
+import { ICV } from './components/cv/data/cv.types';
 import cvData from './components/cv/data/cv-data';
 import cvSchema from './components/cv/data/schemas/cv-schema';
 import reportWebVitals from './reportWebVitals';
@@ -11,8 +11,8 @@ import DataValidator from './data-validator';
 import { JSONSchemaType } from 'ajv';
 
 // TODO: move this data validator to other place, and to make a specific validator for all data types
-const validator = new DataValidator<CV>(
-  cvSchema as unknown as JSONSchemaType<CV>,
+const validator = new DataValidator<ICV>(
+  cvSchema as unknown as JSONSchemaType<ICV>,
 );
 if (validator.validateData(cvData)) {
   console.log('JSON data is valid.');

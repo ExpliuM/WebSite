@@ -7,12 +7,18 @@ import ArrowedHeader, {
 } from '../arrowed-header/arrowed-header';
 import { IconBoxProps } from '../icon-box/icon-box';
 import cv from './data/cv-data';
-import Education from './education/education';
+import Education, {
+  EducationComponent,
+  EducationProps,
+} from './education/education';
 import EducationHeaderButton from './header/education-header-button';
-import Experience from './experience/experience';
+import Experience, {
+  ExperienceComponent,
+  ExperienceProps,
+} from './experience/experience';
 import ExperienceHeaderButton from './header/experience-header-button';
 import GeneralInformation from './general-information/general-information';
-import Misc from './misc/misc';
+import Misc, { MiscComponent, MiscProps } from './misc/misc';
 import MiscHeaderButton from './header/misc-header-button';
 import Skills from './skills/skills';
 import Title from './title';
@@ -50,22 +56,67 @@ const headerData: Array<Options> = [
   },
 ];
 
-const componentData = [
-  {
-    name: 'Experience',
-    Component: Experience,
-    componentProps: { experiences: experiences, height: '45vh', width: '100%' },
-  },
-  {
-    name: 'Education',
-    Component: Education,
-    componentProps: { educations: educations, height: '45vh', width: '100%' },
-  },
-  {
-    name: 'Misc',
-    Component: Misc,
-    componentProps: { height: '45vh', misc: misc, width: '100%' },
-  },
+const experienceProps: ExperienceProps = {
+  experiences,
+  height: '45vh',
+  width: '100%',
+};
+
+const educationProps: EducationProps = {
+  educations,
+  height: '45vh',
+  width: '100%',
+};
+
+const miscProps: MiscProps = { height: '45vh', misc, width: '100%' };
+
+type ExperienceComponentData = {
+  name: string;
+  Component: ExperienceComponent;
+  componentProps: ExperienceProps;
+};
+
+type EducationComponentData = {
+  name: string;
+  Component: EducationComponent;
+  componentProps: EducationProps;
+};
+
+type MiscComponentData = {
+  name: string;
+  Component: MiscComponent;
+  componentProps: MiscProps;
+};
+
+type SelectableComponentData =
+  | ExperienceComponentData
+  | EducationComponentData
+  | MiscComponentData;
+
+type SelectableComponentsData = SelectableComponentData[];
+
+const educationComponentData: EducationComponentData = {
+  name: 'Education',
+  Component: Education,
+  componentProps: educationProps,
+};
+
+const experienceComponentData: ExperienceComponentData = {
+  name: 'Experience',
+  Component: Experience,
+  componentProps: experienceProps,
+};
+
+const miscComponentData: MiscComponentData = {
+  name: 'Misc',
+  Component: Misc,
+  componentProps: miscProps,
+};
+
+const selectableComponentsData: SelectableComponentsData = [
+  educationComponentData,
+  experienceComponentData,
+  miscComponentData,
 ];
 
 const CV = (props: BoxProps) => {
@@ -75,9 +126,13 @@ const CV = (props: BoxProps) => {
     setSelected(selected);
   };
 
-  const SelectedComponent = componentData[selected].Component;
-
-  const selectedProps = componentData[selected].componentProps;
+  const selectedComponentData = selectableComponentsData[selected];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const SelectedComponent = selectedComponentData.Component as (
+    ...args: any[]
+  ) => React.JSX.Element;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const selectedProps = selectedComponentData.componentProps as any;
 
   return (
     <Box
@@ -117,10 +172,7 @@ const CV = (props: BoxProps) => {
           value={selected}
           width="100%"
         />
-        {/* TODO: To fix this typescript error */}
-        {SelectedComponent && selectedProps && (
-          <SelectedComponent {...selectedProps} />
-        )}
+        {selectedComponentData && <SelectedComponent {...selectedProps} />}
       </Box>
     </Box>
   );

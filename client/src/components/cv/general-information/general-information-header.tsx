@@ -7,11 +7,11 @@ import {
 import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
 import React from 'react';
 
-import { GeneralInformation } from '../data/cv.types';
+import { IGeneralInformation } from '../data/cv.types';
 import IconBox, { IconBoxProps } from '../../icon-box/icon-box';
 
 type GeneralInformationHeaderProps = BoxProps & {
-  generalInformation: GeneralInformation;
+  generalInformation: IGeneralInformation;
 };
 
 const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {

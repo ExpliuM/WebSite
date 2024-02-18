@@ -5,7 +5,7 @@ import CollapsedCards, {
   CollapsedCardData,
   CollapsedCardsData,
 } from '../../collapsed-cards/collapsed-cards';
-import { Experience as IExperience } from '../data/cv.types';
+import { IExperience } from '../data/cv.types';
 import EquityBeeLogo from './cards/data/equitybee/logo.svg';
 import ExperienceCardContent from './cards/experience-card-content';
 import ExperienceCardHeader from './cards/experience-card-header';
@@ -16,7 +16,9 @@ export type ExperienceProps = BoxProps & {
   experiences: IExperience[];
 };
 
-const Experience = (props: ExperienceProps) => {
+export type ExperienceComponent = (props: ExperienceProps) => React.JSX.Element;
+
+const Experience: ExperienceComponent = (props: ExperienceProps) => {
   const { experiences, ...otherProps } = props;
 
   const collapsedCardsData: CollapsedCardsData = experiences.map(

@@ -2,10 +2,10 @@ import CardContent, { CardContentProps } from '@mui/material/CardContent';
 import React, { ElementType } from 'react';
 import Typography from '@mui/material/Typography';
 
-import { Experience } from '../../data/cv.types';
+import { IExperience } from '../../data/cv.types';
 
 export type ExperienceCardContentProps = CardContentProps & {
-  experience: Experience;
+  experience: IExperience;
 };
 
 const ExperienceCardContent: ElementType = (

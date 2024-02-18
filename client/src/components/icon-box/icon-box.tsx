@@ -12,7 +12,7 @@ const IconBox = (props: IconBoxProps) => {
 
   return (
     <Box {...otherProps}>
-      <Icon {...iconProps} />
+      {Icon && <Icon {...iconProps} />}
       {children}
     </Box>
   );

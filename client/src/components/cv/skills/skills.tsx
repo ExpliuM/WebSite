@@ -2,7 +2,7 @@ import { Box, BoxProps } from '@mui/material';
 import React from 'react';
 
 import { IconBoxProps } from '../../icon-box/icon-box';
-import { Skills as ISkills } from '../data/cv.types';
+import { ISkills } from '../data/cv.types';
 import APIs from './sub-catagories/apis';
 import Clouds from './sub-catagories/cloud';
 import Databases from './sub-catagories/databases';
