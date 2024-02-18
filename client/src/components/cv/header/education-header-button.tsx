@@ -1,8 +1,8 @@
-import { Typography, TypographyProps } from "@mui/material";
-import React from "react";
+import { Typography, TypographyProps } from '@mui/material';
+import React from 'react';
 
-import IconBox, { IconBoxProps } from "../../icon-box/icon-box";
-import { TbSchool } from "react-icons/tb";
+import IconBox, { IconBoxProps } from '../../icon-box/icon-box';
+import { TbSchool } from 'react-icons/tb';
 
 export type EducationHeaderButtonProps = {
   iconBoxProps: IconBoxProps;

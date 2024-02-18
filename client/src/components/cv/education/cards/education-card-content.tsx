@@ -1,17 +1,17 @@
-import _ from "lodash";
-import CardContent, { CardContentProps } from "@mui/material/CardContent";
-import React, { ElementType } from "react";
-import Typography from "@mui/material/Typography";
+import _ from 'lodash';
+import CardContent, { CardContentProps } from '@mui/material/CardContent';
+import React, { ElementType } from 'react';
+import Typography from '@mui/material/Typography';
 
-import { Education } from "../../data/cv.types";
-import { Box } from "@mui/material";
+import { Education } from '../../data/cv.types';
+import { Box } from '@mui/material';
 
 export type EducationCardContentProps = CardContentProps & {
   educations: Education[];
 };
 
 const EducationCardContent: ElementType = (
-  props: EducationCardContentProps
+  props: EducationCardContentProps,
 ) => {
   const { educations, ...otherProps } = props;
 
@@ -42,7 +42,7 @@ const EducationCardContent: ElementType = (
                 {`${courseName} - ${description}`}
                 {technology}
               </Typography>
-            )
+            ),
           )}
         </Box>
       ))}

@@ -1,9 +1,9 @@
-import CardContent, { CardContentProps } from "@mui/material/CardContent";
-import React, { ElementType } from "react";
-import Typography from "@mui/material/Typography";
+import CardContent, { CardContentProps } from '@mui/material/CardContent';
+import React, { ElementType } from 'react';
+import Typography from '@mui/material/Typography';
 
-import { Misc } from "../../data/cv.types";
-import _ from "lodash";
+import { Misc } from '../../data/cv.types';
+import _ from 'lodash';
 
 export type MiscCardContentProps = CardContentProps & {
   misc: Misc;

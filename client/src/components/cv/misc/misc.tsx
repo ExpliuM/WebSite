@@ -1,10 +1,10 @@
-import { Box, BoxProps, Card, CardProps } from "@mui/material";
-import React from "react";
+import { Box, BoxProps, Card, CardProps } from '@mui/material';
+import React from 'react';
 
-import { Misc as IMisc } from "../data/cv.types";
+import { Misc as IMisc } from '../data/cv.types';
 import MiscCardContent, {
   MiscCardContentProps,
-} from "./cards/misc-card-content";
+} from './cards/misc-card-content';
 
 export type MiscProps = BoxProps & {
   misc: IMisc;
@@ -15,23 +15,23 @@ const Misc = (props: MiscProps) => {
 
   const cardProps: CardProps = {
     sx: {
-      backgroundColor: "primary.light",
-      borderRadius: "1rem",
-      display: "flex",
-      flexDirection: "column",
-      height: "100%",
-      justifyContent: "center",
-      width: "100%",
+      backgroundColor: 'primary.light',
+      borderRadius: '1rem',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+      justifyContent: 'center',
+      width: '100%',
     },
   };
 
   const miscCardContentProps: MiscCardContentProps = {
     misc,
     sx: {
-      alignItems: "center",
-      display: "flex",
-      flexDirection: "column",
-      padding: "0.1rem",
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      padding: '0.1rem',
     },
   };
 

@@ -1,31 +1,61 @@
-import { Module } from '@nestjs/common';
+import { Module, forwardRef } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import UsersController from './user/users.controller';
-import { UsersService } from './user/users.service';
+import Education from './education/education.entity';
+import Experience from './experience/experience.entity';
+import GeneralInformation from './general-information/general-information.entity';
+import Misc from './misc/misc.entity';
+import Profile from './profile/profile.entity';
+import ProfileController from './profile/profile.controller';
+import ProfileService from './profile/profile.service';
+import Skill from './skill/skill.entity';
 import User from './user/user.entity';
+import UsersController from './user/users.controller';
+import UsersService from './user/users.service';
 import ViewCounter from './view-counter/veiw-counter.entity';
 import ViewCounterController from './view-counter/view-counter.controller';
 import ViewCounterService from './view-counter/view-counter.service';
+import { Project } from './project/project.entity';
+import ProjectController from './project/project.controller';
+import ProjectService from './project/project.service';
+
+const entities = [
+  Education,
+  Experience,
+  GeneralInformation,
+  Misc,
+  Profile,
+  Project,
+  Skill,
+  User,
+  ViewCounter,
+];
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'explium',
-      password: 'explium',
+      autoLoadEntities: true,
       database: 'root',
-      entities: [User, ViewCounter],
+      entities: entities,
+      host: 'localhost',
+      password: 'explium',
+      port: 5432,
       synchronize: true,
+      type: 'postgres',
+      username: 'explium',
     }),
-    TypeOrmModule.forFeature([User]),
-    TypeOrmModule.forFeature([ViewCounter]),
+    TypeOrmModule.forFeature(entities),
+    forwardRef(() => Project),
+    forwardRef(() => Education),
+    forwardRef(() => Experience),
+    forwardRef(() => GeneralInformation),
   ],
-  controllers: [AppController, UsersController, ViewCounterController],
-  providers: [AppService, UsersService, ViewCounterService],
+  controllers: [
+    ProfileController,
+    ProjectController,
+    UsersController,
+    ViewCounterController,
+  ],
+  providers: [ProfileService, ProjectService, UsersService, ViewCounterService],
 })
 export class AppModule {}

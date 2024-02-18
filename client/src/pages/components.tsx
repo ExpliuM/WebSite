@@ -1,8 +1,8 @@
-import { Box, BoxProps, Typography } from "@mui/material";
-import React from "react";
+import { Box, BoxProps, Typography } from '@mui/material';
+import React from 'react';
 
-import { TbIcons } from "react-icons/tb";
-import IconBox from "../components/icon-box/icon-box";
+import { TbIcons } from 'react-icons/tb';
+import IconBox from '../components/icon-box/icon-box';
 
 const Components = (props: BoxProps) => (
   <Box alignItems="center" display="flex" flexDirection="column" {...props}>

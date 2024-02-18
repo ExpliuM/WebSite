@@ -1,21 +1,21 @@
-import { Box, BoxProps, TypographyProps } from "@mui/material";
-import React, { useState } from "react";
+import { Box, BoxProps, TypographyProps } from '@mui/material';
+import React, { useState } from 'react';
 
 import ArrowedHeader, {
   ArrowedHeaderEventHandler,
   Options,
-} from "../arrowed-header/arrowed-header";
-import { IconBoxProps } from "../icon-box/icon-box";
-import cv from "./data/cv-data";
-import Education from "./education/education";
-import EducationHeaderButton from "./header/education-header-button";
-import Experience from "./experience/experience";
-import ExperienceHeaderButton from "./header/experience-header-button";
-import GeneralInformation from "./general-information/general-information";
-import Misc from "./misc/misc";
-import MiscHeaderButton from "./header/misc-header-button";
-import Skills from "./skills/skills";
-import Title from "./title";
+} from '../arrowed-header/arrowed-header';
+import { IconBoxProps } from '../icon-box/icon-box';
+import cv from './data/cv-data';
+import Education from './education/education';
+import EducationHeaderButton from './header/education-header-button';
+import Experience from './experience/experience';
+import ExperienceHeaderButton from './header/experience-header-button';
+import GeneralInformation from './general-information/general-information';
+import Misc from './misc/misc';
+import MiscHeaderButton from './header/misc-header-button';
+import Skills from './skills/skills';
+import Title from './title';
 
 const { educations, experiences, generalInformation, misc, name, skills } = cv;
 
@@ -25,14 +25,14 @@ const headerButtonProps: {
   typographyProps: TypographyProps;
 } = {
   iconBoxProps: {
-    alignItems: "center",
-    display: "flex",
-    gap: "0.5rem",
-    justifyContent: "center",
-    width: "100%",
-    iconProps: { size: "1.5rem" },
+    alignItems: 'center',
+    display: 'flex',
+    gap: '0.5rem',
+    justifyContent: 'center',
+    width: '100%',
+    iconProps: { size: '1.5rem' },
   },
-  typographyProps: { variant: "h6" },
+  typographyProps: { variant: 'h6' },
 };
 
 const headerData: Array<Options> = [
@@ -52,19 +52,19 @@ const headerData: Array<Options> = [
 
 const componentData = [
   {
-    name: "Experience",
+    name: 'Experience',
     Component: Experience,
-    componentProps: { experiences: experiences, height: "45vh", width: "100%" },
+    componentProps: { experiences: experiences, height: '45vh', width: '100%' },
   },
   {
-    name: "Education",
+    name: 'Education',
     Component: Education,
-    componentProps: { educations: educations, height: "45vh", width: "100%" },
+    componentProps: { educations: educations, height: '45vh', width: '100%' },
   },
   {
-    name: "Misc",
+    name: 'Misc',
     Component: Misc,
-    componentProps: { height: "45vh", misc: misc, width: "100%" },
+    componentProps: { height: '45vh', misc: misc, width: '100%' },
   },
 ];
 
@@ -102,7 +102,7 @@ const CV = (props: BoxProps) => {
       />
       <Box
         borderRadius="1rem"
-        sx={{ backgroundColor: "primary.main" }}
+        sx={{ backgroundColor: 'primary.main' }}
         width="90%"
       >
         <ArrowedHeader
@@ -110,7 +110,7 @@ const CV = (props: BoxProps) => {
           dataArray={headerData}
           display="flex"
           flexDirection="row"
-          iconProps={{ size: "2rem" }}
+          iconProps={{ size: '2rem' }}
           onClick={handleArrowedHeaderClicked}
           paddingBottom="0.5rem"
           paddingTop="0.5rem"

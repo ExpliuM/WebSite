@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import Game, { GameState } from "../Functions/game";
-import Board from "../Functions/board";
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import Game, { GameState } from '../Functions/game';
+import Board from '../Functions/board';
 
 interface IState {
   gameState: GameState;
@@ -12,12 +12,12 @@ const initialState: IState = {
 };
 
 export const Slice = createSlice({
-  name: "Tic-Tac-Toe",
+  name: 'Tic-Tac-Toe',
   initialState,
   reducers: {
     playTurn: (
       state: IState,
-      action: PayloadAction<{ xIndex: number; yIndex: number }>
+      action: PayloadAction<{ xIndex: number; yIndex: number }>,
     ) => {
       const { xIndex, yIndex } = action.payload;
       Game.playTurn(state.gameState, xIndex, yIndex);

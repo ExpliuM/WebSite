@@ -1,22 +1,22 @@
 const educationSchema = {
-  type: "object",
+  type: 'object',
   properties: {
-    degree: { type: "string" },
-    institute: { type: "string" },
+    degree: { type: 'string' },
+    institute: { type: 'string' },
     projects: {
-      type: "array",
+      type: 'array',
       items: {
-        type: "object",
+        type: 'object',
         properties: {
-          courseName: { type: "string" },
-          description: { type: "string" },
-          technology: { type: "string" },
+          courseName: { type: 'string' },
+          description: { type: 'string' },
+          technology: { type: 'string' },
         },
-        required: ["courseName", "description", "technology"],
+        required: ['courseName', 'description', 'technology'],
       },
     },
   },
-  required: ["degree", "institute", "projects"],
+  required: ['degree', 'institute', 'projects'],
   additionalProperties: false,
 };
 

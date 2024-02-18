@@ -1,0 +1,16 @@
+{
+  "name": "seeder",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config",
+    "seed": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
+  },
+  "devDependencies": {
+    "typeorm": "^0.3.17",
+    "typeorm-seeding": "^1.6.1",
+    "typescript": "^5.1.6"
+  }
+}

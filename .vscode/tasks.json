@@ -3,10 +3,24 @@
   "tasks": [
     {
       "type": "shell",
+      "command": "pwd",
+      "label": "run dev",
+      "dependsOn": ["pnpm: client dev", "pnpm: server debug"]
+    },
+    {
+      "type": "shell",
       "command": "pnpm -F client dev",
       "problemMatcher": [],
       "label": "pnpm: client dev",
+      "dependsOn": ["pnpm: install"],
       "detail": "vite"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm install",
+      "problemMatcher": [],
+      "label": "pnpm: install",
+      "dependsOn": [""]
     },
     {
       "type": "shell",
@@ -26,24 +40,57 @@
     },
     {
       "type": "shell",
+      "command": "pnpm -F client install",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "pnpm: client install",
+      "detail": "client install"
+    },
+    {
+      "type": "shell",
       "command": "pnpm -F server start:debug",
       "problemMatcher": [],
       "label": "pnpm: server debug",
-      "detail": ""
+      "detail": "",
+      "dependsOn": ["pnpm: install"]
     },
     {
       "type": "shell",
       "command": "pnpm -F server postgres:start",
       "problemMatcher": [],
-      "label": "pnpm: server postgres start",
+      "label": "Postgres start",
       "detail": ""
     },
     {
       "type": "shell",
       "command": "pnpm -F server postgres:stop",
       "problemMatcher": [],
-      "label": "pnpm: server postgres stop",
+      "label": "Postgres stop",
       "detail": ""
+    },
+    {
+      "type": "npm",
+      "script": "seed:run",
+      "path": "server",
+      "problemMatcher": [],
+      "label": "npm: seed:run - server",
+      "detail": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F server install",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Server install",
+      "detail": "Server install"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm -F server-seed run seed",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Seed server",
+      "detail": "Seed server"
     }
   ]
 }

@@ -1,8 +1,8 @@
-import { AiOutlineCloud } from "react-icons/ai";
-import { Typography } from "@mui/material";
-import React from "react";
+import { AiOutlineCloud } from 'react-icons/ai';
+import { Typography } from '@mui/material';
+import React from 'react';
 
-import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
 
 export type CloudsProps = IconBoxProps & {
   clouds: string[];
@@ -17,7 +17,7 @@ const Clouds = (props: CloudsProps) => {
         Clouds:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {clouds.join(", ")}.
+        {clouds.join(', ')}.
       </Typography>
     </IconBox>
   );

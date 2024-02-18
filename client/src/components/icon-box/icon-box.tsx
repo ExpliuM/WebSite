@@ -1,6 +1,6 @@
-import { Box, BoxProps } from "@mui/material";
-import { IconBaseProps, IconType } from "react-icons";
-import React from "react";
+import { Box, BoxProps } from '@mui/material';
+import { IconBaseProps, IconType } from 'react-icons';
+import React from 'react';
 
 export type IconBoxProps = BoxProps & {
   Icon?: IconType;

@@ -1,4 +1,4 @@
-import { PLAYER, X_SIZE, Y_SIZE } from "./constants";
+import { PLAYER, X_SIZE, Y_SIZE } from './constants';
 
 export interface BoardState {
   cellMatrix: PLAYER[][];
@@ -37,7 +37,7 @@ const setCell = (
   boardState: BoardState,
   value: PLAYER,
   xIndex: number,
-  yIndex: number
+  yIndex: number,
 ) => {
   boardState.cellMatrix[yIndex][xIndex] = value;
 
@@ -69,7 +69,7 @@ const checkCol = (boardState: BoardState, xIndex: number) => {
 
 const checkDiag1 = (boardState: BoardState) => {
   if (
-    boardState.cellMatrix[0][0] !== "" &&
+    boardState.cellMatrix[0][0] !== '' &&
     boardState.cellMatrix[0][0] === boardState.cellMatrix[1][1] &&
     boardState.cellMatrix[1][1] === boardState.cellMatrix[2][2]
   ) {
@@ -79,7 +79,7 @@ const checkDiag1 = (boardState: BoardState) => {
 
 const checkDiag2 = (boardState: BoardState) => {
   if (
-    boardState.cellMatrix[0][2] !== "" &&
+    boardState.cellMatrix[0][2] !== '' &&
     boardState.cellMatrix[0][2] === boardState.cellMatrix[1][1] &&
     boardState.cellMatrix[1][1] === boardState.cellMatrix[2][0]
   ) {
@@ -99,7 +99,7 @@ const checkRow = (boardState: BoardState, yIndex: number) => {
 const isDiag1Affected = (
   boardState: BoardState,
   xIndex: number,
-  yIndex: number
+  yIndex: number,
 ): boolean => {
   return xIndex == yIndex;
 };
@@ -107,7 +107,7 @@ const isDiag1Affected = (
 const isDiag2Affected = (
   boardState: BoardState,
   xIndex: number,
-  yIndex: number
+  yIndex: number,
 ): boolean => {
   return xIndex == (yIndex + 2) % 3;
 };

@@ -1,11 +1,11 @@
-import React from "react";
-import { Button, Box, Grid, BoxProps, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Button, Box, Grid, BoxProps, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 // TODO: To make projects page and to put Tic Tac Toe and Components under it
 const buttonsData: ReadonlyArray<{ text: string; href: string }> = [
-  { text: "CV", href: "/cv" },
-  { text: "Tic Tac Toe", href: "/tic-tac-toe" },
+  { text: 'CV', href: '/cv' },
+  { text: 'Tic Tac Toe', href: '/tic-tac-toe' },
 ];
 
 const Header = (props: BoxProps) => (
@@ -15,7 +15,7 @@ const Header = (props: BoxProps) => (
         <Grid item key={text}>
           <Link to={href}>
             <Button
-              sx={{ backgroundColor: "primary.light" }}
+              sx={{ backgroundColor: 'primary.light' }}
               variant="contained"
             >
               <Typography color="text.primary" variant="subtitle1">

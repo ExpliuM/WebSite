@@ -3,12 +3,12 @@ import {
   AiOutlinePhone,
   AiOutlineLinkedin,
   AiOutlineMail,
-} from "react-icons/ai";
-import { Box, BoxProps, Typography, TypographyProps } from "@mui/material";
-import React from "react";
+} from 'react-icons/ai';
+import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
+import React from 'react';
 
-import { GeneralInformation } from "../data/cv.types";
-import IconBox, { IconBoxProps } from "../../icon-box/icon-box";
+import { GeneralInformation } from '../data/cv.types';
+import IconBox, { IconBoxProps } from '../../icon-box/icon-box';
 
 type GeneralInformationHeaderProps = BoxProps & {
   generalInformation: GeneralInformation;
@@ -22,34 +22,34 @@ const GeneralInformationHeader = (props: GeneralInformationHeaderProps) => {
   const linkedInLinkUrl: URL = new URL(linkedInLink);
 
   const baseIconBoxProps: IconBoxProps = {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-    gap: "0.5rem",
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '0.5rem',
     iconProps: {
-      size: "1.5rem",
+      size: '1.5rem',
     },
   };
 
   const leftIconBoxProps: IconBoxProps = {
     ...baseIconBoxProps,
-    marginRight: "1rem",
+    marginRight: '1rem',
   };
 
   const middleIconBoxProps: IconBoxProps = {
     ...baseIconBoxProps,
-    marginRight: "1rem",
-    marginLeft: "1rem",
+    marginRight: '1rem',
+    marginLeft: '1rem',
   };
 
   const rightIconBoxProps: IconBoxProps = {
     ...baseIconBoxProps,
-    marginLeft: "1rem",
+    marginLeft: '1rem',
   };
 
   const typographyProps: TypographyProps = {
-    color: "text.primary",
-    variant: "body1",
+    color: 'text.primary',
+    variant: 'body1',
   };
 
   return (

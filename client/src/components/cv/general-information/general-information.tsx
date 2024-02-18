@@ -1,9 +1,9 @@
-import { Box, BoxProps } from "@mui/material";
-import React from "react";
+import { Box, BoxProps } from '@mui/material';
+import React from 'react';
 
-import GeneralInformationHeader from "./general-information-header";
-import SubTitle from "../subtitle";
-import { GeneralInformation as IGeneralInformation } from "../data/cv.types";
+import GeneralInformationHeader from './general-information-header';
+import SubTitle from '../subtitle';
+import { GeneralInformation as IGeneralInformation } from '../data/cv.types';
 
 export type GeneralInformationProps = BoxProps & {
   generalInformation: IGeneralInformation;

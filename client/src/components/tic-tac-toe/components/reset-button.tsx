@@ -1,8 +1,8 @@
-import { Button, ButtonProps, Typography } from "@mui/material";
-import { useDispatch } from "react-redux";
-import React from "react";
+import { Button, ButtonProps, Typography } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import React from 'react';
 
-import { reset } from "../Redux/slice";
+import { reset } from '../Redux/slice';
 
 // TODO: To improve this buttons style
 const ResetButton = (props: ButtonProps) => {

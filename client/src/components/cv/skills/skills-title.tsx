@@ -1,6 +1,6 @@
-import { Box, BoxProps, Typography, TypographyProps } from "@mui/material";
-import { GiSkills } from "react-icons/gi";
-import React from "react";
+import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
+import { GiSkills } from 'react-icons/gi';
+import React from 'react';
 
 export type TitleProps = BoxProps & {
   typographyProps?: TypographyProps;

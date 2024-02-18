@@ -1,5 +1,5 @@
-import addFormats, { FormatName, FormatOptions } from "ajv-formats";
-import Ajv, { ErrorObject, JSONSchemaType, ValidateFunction } from "ajv";
+import addFormats, { FormatName, FormatOptions } from 'ajv-formats';
+import Ajv, { ErrorObject, JSONSchemaType, ValidateFunction } from 'ajv';
 
 class DataValidator<T> {
   private ajv: Ajv;
@@ -8,9 +8,9 @@ class DataValidator<T> {
   constructor(private schema: JSONSchemaType<T>) {
     this.ajv = new Ajv();
 
-    const formatNames: FormatName[] = ["email", "uri"];
+    const formatNames: FormatName[] = ['email', 'uri'];
     const formatsPluginOptions: FormatOptions = {
-      mode: "fast",
+      mode: 'fast',
       formats: formatNames,
     };
 

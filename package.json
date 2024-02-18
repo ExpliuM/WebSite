@@ -1,6 +1,9 @@
 {
-  "dependencies": {
-    "client": "link:client",
-    "server": "link:server"
+  "scripts": {
+    "prettier:check": "prettier . --check",
+    "prettier:format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3"
   }
 }

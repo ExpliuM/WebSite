@@ -1,23 +1,23 @@
-import React, { ElementType } from "react";
+import React, { ElementType } from 'react';
 
-import { Experience } from "../../data/cv.types";
+import { Experience } from '../../data/cv.types';
 
 import GenericCardHeader, {
   GenericCardHeaderProps,
-} from "../../../card/generic-card-header/generic-card-header";
+} from '../../../card/generic-card-header/generic-card-header';
 
 type ExperienceCardHeaderProps = GenericCardHeaderProps & {
   experience: Experience;
   Logo: string;
 };
 const ExperienceCardHeader: ElementType = (
-  props: ExperienceCardHeaderProps
+  props: ExperienceCardHeaderProps,
 ) => {
   const { experience, Logo, sideways, ...otherProps } = props;
 
   const horizontalSubHeader = `${experience.workPeriod.from} - ${experience.workPeriod.till}`;
   const horizontalTitle = `${experience.companyName} | ${experience.title} | ${experience.professionalTitle}`;
-  const verticalSubHeader = "";
+  const verticalSubHeader = '';
   const verticalTitle = `${experience.companyName} | ${experience.professionalTitle}`;
 
   return (

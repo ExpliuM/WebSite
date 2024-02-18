@@ -6,12 +6,12 @@ import {
   GridProps,
   Paper,
   Typography,
-} from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import React from "react";
+} from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 
-import { playTurn, selectBoard } from "../Redux/slice";
-import { X_SIZE, Y_SIZE } from "../Functions/constants";
+import { playTurn, selectBoard } from '../Redux/slice';
+import { X_SIZE, Y_SIZE } from '../Functions/constants';
 
 const Board = (props: BoxProps, gridProps: GridProps) => {
   const board = useSelector(selectBoard);
@@ -39,9 +39,9 @@ const Board = (props: BoxProps, gridProps: GridProps) => {
                 <Button
                   onClick={handleCellClick(xIndex, yIndex)}
                   sx={{
-                    backgroundColor: "primary.light",
+                    backgroundColor: 'primary.light',
                     height: 100,
-                    padding: "xs",
+                    padding: 'xs',
                     width: 100,
                   }}
                 >

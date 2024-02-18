@@ -1,7 +1,7 @@
-import { Typography } from "@mui/material";
-import React from "react";
-import { BsTools } from "react-icons/bs";
-import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+import { Typography } from '@mui/material';
+import React from 'react';
+import { BsTools } from 'react-icons/bs';
+import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
 
 export type ToolsProps = IconBoxProps & {
   tools: string[];
@@ -15,7 +15,7 @@ const Tools = (props: ToolsProps) => {
         Tools:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {tools.join(", ")}.
+        {tools.join(', ')}.
       </Typography>
     </IconBox>
   );

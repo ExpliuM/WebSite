@@ -5,14 +5,14 @@ import {
   Grid,
   IconButton,
   Typography,
-} from "@mui/material";
+} from '@mui/material';
 import {
   HiOutlineArrowCircleLeft,
   HiOutlineArrowCircleRight,
-} from "react-icons/hi";
-import { IconBaseProps } from "react-icons/lib";
-import React, { ElementType, useState } from "react";
-import { PropsOf } from "@emotion/react";
+} from 'react-icons/hi';
+import { IconBaseProps } from 'react-icons/lib';
+import React, { ElementType, useState } from 'react';
+import { PropsOf } from '@emotion/react';
 
 export type Options = {
   text?: string;
@@ -22,15 +22,15 @@ export type Options = {
 
 export type ArrowedHeaderEventHandler = (selected: number) => void;
 
-export type ArrowedHeaderProps = Omit<BoxProps, "onClick"> & {
+export type ArrowedHeaderProps = Omit<BoxProps, 'onClick'> & {
   dataArray: Array<Options>;
   iconProps?: IconBaseProps;
   onClick?: ArrowedHeaderEventHandler;
   value?: number | undefined;
 };
 
-const SELECTED_COLOR = "primary.light";
-const COLOR = "primary.main";
+const SELECTED_COLOR = 'primary.light';
+const COLOR = 'primary.main';
 
 const ArrowedHeader = (props: ArrowedHeaderProps) => {
   const { dataArray, iconProps, onClick, value, ...otherProps } = props;

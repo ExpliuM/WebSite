@@ -1,15 +1,15 @@
-import CardContent, { CardContentProps } from "@mui/material/CardContent";
-import React, { ElementType } from "react";
-import Typography from "@mui/material/Typography";
+import CardContent, { CardContentProps } from '@mui/material/CardContent';
+import React, { ElementType } from 'react';
+import Typography from '@mui/material/Typography';
 
-import { Experience } from "../../data/cv.types";
+import { Experience } from '../../data/cv.types';
 
 export type ExperienceCardContentProps = CardContentProps & {
   experience: Experience;
 };
 
 const ExperienceCardContent: ElementType = (
-  props: ExperienceCardContentProps
+  props: ExperienceCardContentProps,
 ) => {
   const { experience, ...otherProps } = props;
   const { generalDescription, projectsAndTasks } = experience;
@@ -41,7 +41,7 @@ const ExperienceCardContent: ElementType = (
           >
             {projectName} - {projectDescription}
           </Typography>
-        )
+        ),
       )}
     </CardContent>
   );

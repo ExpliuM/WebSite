@@ -1,16 +1,16 @@
-import { Box, BoxProps } from "@mui/material";
-import React from "react";
+import { Box, BoxProps } from '@mui/material';
+import React from 'react';
 
 import CollapsedCards, {
   CollapsedCardData,
   CollapsedCardsData,
-} from "../../collapsed-cards/collapsed-cards";
-import { Experience as IExperience } from "../data/cv.types";
-import EquityBeeLogo from "./cards/data/equitybee/logo.svg";
-import ExperienceCardContent from "./cards/experience-card-content";
-import ExperienceCardHeader from "./cards/experience-card-header";
-import ForescoutLogo from "./cards/data/forescout/logo.svg";
-import RafaelLogo from "./cards/data/rafael/logo.svg";
+} from '../../collapsed-cards/collapsed-cards';
+import { Experience as IExperience } from '../data/cv.types';
+import EquityBeeLogo from './cards/data/equitybee/logo.svg';
+import ExperienceCardContent from './cards/experience-card-content';
+import ExperienceCardHeader from './cards/experience-card-header';
+import ForescoutLogo from './cards/data/forescout/logo.svg';
+import RafaelLogo from './cards/data/rafael/logo.svg';
 
 export type ExperienceProps = BoxProps & {
   experiences: IExperience[];
@@ -24,13 +24,13 @@ const Experience = (props: ExperienceProps) => {
       const { companyName } = experience;
       let Logo;
       switch (companyName) {
-        case "EquityBee":
+        case 'EquityBee':
           Logo = EquityBeeLogo;
           break;
-        case "Forescout":
+        case 'Forescout':
           Logo = ForescoutLogo;
           break;
-        case "Rafael":
+        case 'Rafael':
         default:
           Logo = RafaelLogo;
       }
@@ -40,7 +40,7 @@ const Experience = (props: ExperienceProps) => {
         CardHeader: ExperienceCardHeader,
         cardHeaderProps: { experience, Logo },
       };
-    }
+    },
   );
 
   return (

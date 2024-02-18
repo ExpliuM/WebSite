@@ -1,6 +1,6 @@
-import { PropsOf } from "@emotion/react";
-import { Box, BoxProps, Card } from "@mui/material";
-import React, { ElementType, Fragment, useState } from "react";
+import { PropsOf } from '@emotion/react';
+import { Box, BoxProps, Card } from '@mui/material';
+import React, { ElementType, Fragment, useState } from 'react';
 
 export type CollapsedCardData = {
   CardContent: ElementType;
@@ -29,23 +29,23 @@ const CollapsedCards = (props: CollapsedCardsProps) => {
       {collapsedCardsData.map(
         (
           { CardContent, cardContentProps, CardHeader, cardHeaderProps },
-          cardIndex
+          cardIndex,
         ) => (
           <Card
             key={cardIndex}
             onMouseOverCapture={handleMouseOverCapture(cardIndex)}
             sx={{
               backgroundColor:
-                focused === cardIndex ? "primary.light" : "primary.dark",
-              borderRadius: "1rem",
-              width: focused === cardIndex ? "90%" : "5%",
+                focused === cardIndex ? 'primary.light' : 'primary.dark',
+              borderRadius: '1rem',
+              width: focused === cardIndex ? '90%' : '5%',
             }}
           >
             {CardHeader && (
               <CardHeader
                 sideways={focused !== cardIndex}
                 sx={{
-                  color: focused === cardIndex ? "text.main" : "text.disabled",
+                  color: focused === cardIndex ? 'text.main' : 'text.disabled',
                 }}
                 {...cardHeaderProps}
               />
@@ -56,7 +56,7 @@ const CollapsedCards = (props: CollapsedCardsProps) => {
               </Fragment>
             ) : null}
           </Card>
-        )
+        ),
       )}
     </Box>
   );

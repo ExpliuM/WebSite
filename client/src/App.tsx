@@ -1,17 +1,17 @@
-import { Box, BoxProps, ThemeProvider } from "@mui/material";
-import { CV, NoMatch, TicTacToe } from "./pages";
-import { Provider } from "react-redux";
-import { Route, Routes } from "react-router-dom";
-import React from "react";
+import { Box, BoxProps, ThemeProvider } from '@mui/material';
+import { CV, NoMatch, TicTacToe } from './pages';
+import { Provider } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
-import { store } from "./app/store";
-import Header from "./components/header/header";
-import theme from "./theme";
+import { store } from './app/store';
+import Header from './components/header/header';
+import theme from './theme';
 
 const App = () => {
   const boxProps: BoxProps = {
-    color: "primary.main",
-    height: "100vh",
+    color: 'primary.main',
+    height: '100vh',
   };
 
   return (

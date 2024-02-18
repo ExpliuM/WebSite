@@ -1,38 +1,38 @@
-import skillsSchema from "./skills-schema";
+import skillsSchema from './skills-schema';
 
 const experienceSchema = {
-  type: "object",
+  type: 'object',
   properties: {
-    companyName: { type: "string" },
-    professionalTitle: { type: "string" },
-    title: { type: "string" },
+    companyName: { type: 'string' },
+    professionalTitle: { type: 'string' },
+    title: { type: 'string' },
     workPeriod: {
-      type: "object",
+      type: 'object',
       properties: {
-        From: { type: "string" },
-        Till: { type: "string" },
+        From: { type: 'string' },
+        Till: { type: 'string' },
       },
-      required: ["From", "Till"],
+      required: ['From', 'Till'],
       additionalProperties: false,
     },
     skills: skillsSchema,
-    generalDescription: { type: "string" },
+    generalDescription: { type: 'string' },
     projectsAndTasks: {
-      type: "object",
+      type: 'object',
       patternProperties: {
-        "^.*$": { type: ["string"] },
+        '^.*$': { type: ['string'] },
       },
       additionalProperties: true,
     },
   },
   required: [
-    "companyName",
-    "professionalTitle",
-    "title",
-    "workPeriod",
-    "skills",
-    "generalDescription",
-    "projectsAndTasks",
+    'companyName',
+    'professionalTitle',
+    'title',
+    'workPeriod',
+    'skills',
+    'generalDescription',
+    'projectsAndTasks',
   ],
   additionalProperties: false,
 };

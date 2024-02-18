@@ -1,5 +1,5 @@
-import { CV } from "./cv.types";
-import cvData from "./cv.json";
+import { CV } from './cv.types';
+import cvData from './cv.json';
 
 const cv: CV = cvData;
 

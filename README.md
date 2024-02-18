@@ -1,8 +1,11 @@
 # Explium - Website
+
 ## About
+
 My own website.
 
 ## Screenshot
+
 ![WebSite screenshot - cv page](./documentation/screenshots/cv-page.png "WebSite screenshot - cv page")
 
 ## Prepare

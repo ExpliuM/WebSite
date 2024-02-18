@@ -1,12 +1,12 @@
-import { Box, BoxProps } from "@mui/material";
-import { Fireworks } from "@fireworks-js/react";
-import { useSelector } from "react-redux";
-import React from "react";
+import { Box, BoxProps } from '@mui/material';
+import { Fireworks } from '@fireworks-js/react';
+import { useSelector } from 'react-redux';
+import React from 'react';
 
-import { selectWinner } from "./Redux/slice";
-import Board from "./components/board";
-import WinnerMessage from "./components/winner";
-import ResetButton from "./components/reset-button";
+import { selectWinner } from './Redux/slice';
+import Board from './components/board';
+import WinnerMessage from './components/winner';
+import ResetButton from './components/reset-button';
 
 // TODO: Create a separate component module out of it
 // TODO: Add menu to the game
@@ -19,9 +19,9 @@ const TicTacToe = (props: BoxProps) => {
       {winner && (
         <Fireworks
           style={{
-            width: "100%",
-            height: "100%",
-            position: "fixed",
+            width: '100%',
+            height: '100%',
+            position: 'fixed',
             zIndex: 1,
           }}
         />

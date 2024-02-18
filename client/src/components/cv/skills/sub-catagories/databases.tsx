@@ -1,15 +1,15 @@
-import { Typography } from "@mui/material";
-import { BsDatabase } from "react-icons/bs";
-import React from "react";
+import { Typography } from '@mui/material';
+import { BsDatabase } from 'react-icons/bs';
+import React from 'react';
 
-import IconBox, { IconBoxProps } from "../../../icon-box/icon-box";
+import IconBox, { IconBoxProps } from '../../../icon-box/icon-box';
 
 export type DatabasesProps = IconBoxProps & {
   databases: string[];
 };
 
 const Databases = (props: DatabasesProps) => {
-  const { databases ,...otherProps} = props;
+  const { databases, ...otherProps } = props;
 
   return (
     <IconBox Icon={BsDatabase} {...otherProps}>
@@ -17,7 +17,7 @@ const Databases = (props: DatabasesProps) => {
         Databases:
       </Typography>
       <Typography color="text.primary" variant="body1">
-        {databases.join(", ")}.
+        {databases.join(', ')}.
       </Typography>
     </IconBox>
   );

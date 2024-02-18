@@ -1,5 +1,5 @@
-import { PLAYER } from "./constants";
-import Board, { BoardState } from "./board";
+import { PLAYER } from './constants';
+import Board, { BoardState } from './board';
 
 export interface GameState {
   boardState: BoardState;

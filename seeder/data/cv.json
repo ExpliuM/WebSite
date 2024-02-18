@@ -1,0 +1,173 @@
+{
+  "name": "Alexander Khvolis",
+  "generalInformation": {
+    "address": "Crailsheim, Germany",
+    "email": "alex1309@gmail.com",
+    "linkedInLink": "https://www.linkedin.com/in/alex-khvolis",
+    "phoneNumber": "017620126517"
+  },
+  "skills": {
+    "apis": [
+      "React",
+      "NodeJS",
+      "Redux",
+      "HubSpot",
+      "Twilio",
+      "LinkedIn",
+      "SendGrid",
+      "FirebaseAuth"
+    ],
+    "clouds": ["GCP", "Azure"],
+    "databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
+    "environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
+    "operationSystems": [
+      "MacOS",
+      "Ubuntu",
+      "CentOS",
+      "VxWorks",
+      "Unix",
+      "Windows"
+    ],
+    "programmingLanguages": [
+      "JavaScript",
+      "Typescript",
+      "C++",
+      "C",
+      "Bash",
+      "Python",
+      "Perl",
+      "java"
+    ],
+    "tools": ["Git", "Monday", "Jira"]
+  },
+  "experiences": [
+    {
+      "companyName": "EquityBee",
+      "professionalTitle": "Full-Stack developer",
+      "title": "Marketing Dev Squad Tech Lead",
+      "workPeriod": {
+        "from": "06/2021",
+        "till": "Today"
+      },
+      "skills": {
+        "apis": [
+          "React",
+          "NodeJS",
+          "Redux",
+          "HubSpot",
+          "Twilio",
+          "LinkedIn",
+          "SendGrid",
+          "FirebaseAuth"
+        ],
+        "clouds": ["GCP"],
+        "databases": ["Neo4J", "Datastore", "Firebase", "PostgreSQL"],
+        "environments": ["VSCode", "IntelliJ", "Visual Studio", "Eclipse"],
+        "operationSystems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
+        "programmingLanguages": [
+          "JavaScript",
+          "Typescript",
+          "C++",
+          "C",
+          "Bash",
+          "Python",
+          "Perl",
+          "java"
+        ],
+        "tools": ["Git", "Monday", "Jira"]
+      },
+      "generalDescription": "Responsible to Develop and Implement the complex Features. Leading and Accompanying the team members with providing solution plan, design, architecture, development, and documentation. alongside code reviewing and team members' technical training and growth. the team leader's replacement in his absence",
+      "projectsAndTasks": {
+        "Dynamic funnels": "Designing, Modelling, and Templating the Sign-Up process into a dynamic funnel sign-up system, allowing the company to create and deliver new complex funnels quickly and easily",
+        "Funnel validation": "Developing a form/input wrapper that extended the validation, state management, and data syncing",
+        "Client Side performance": "Developing and refactoring pages/components, expanding the design system, chunk splitting and lazy loading, resulted with higher \"PageSpeed Insights\" score.",
+        "Automation and System": "Migrating the internal Marketing Email Automation System to HubSpot’s CRM Automation and developing Neo4J to HubSpot’s data syncing",
+        "Databases": "Expanding schemas, Managing data structures, and the efficiency of the calculated fields"
+      }
+    },
+    {
+      "companyName": "Forescout",
+      "professionalTitle": "Software Developer",
+      "title": "Sustaining Team member",
+      "workPeriod": {
+        "from": "08/2019",
+        "till": "06/2021"
+      },
+      "skills": {
+        "apis": [],
+        "clouds": [],
+        "databases": ["PostgreSQL"],
+        "environments": ["VSCode, IntelliJ, Visual Studio, Eclipse"],
+        "operationSystems": ["MacOS", "Ubuntu", "CentOS", "Unix", "Windows"],
+        "programmingLanguages": ["C++", "C", "Bash", "Python", "Perl", "java"],
+        "tools": ["Git", "Jira"]
+      },
+      "generalDescription": "Code Refactoring, Features and bug fixes implementation for all the legacy products of the company",
+      "projectsAndTasks": {
+        "Refactor, Fixes and Feature implementation": "Hot swap redundancy Data back-up and restore mechanism improvements, Refactoring the Network devices ACL management system",
+        "PT and CVE Research": "Development of security related fixes, Java deserialization, Database permissions, Race conditions, Server-side/Client-side vulnerabilities"
+      }
+    },
+    {
+      "companyName": "Rafael",
+      "professionalTitle": "Real-Time Embedded Software Developer",
+      "title": "Central software team member",
+      "workPeriod": {
+        "from": "05/2017",
+        "till": "08/2019"
+      },
+      "skills": {
+        "apis": [],
+        "clouds": [],
+        "databases": [],
+        "environments": ["Visual Studio"],
+        "operationSystems": ["VxWorks"],
+        "programmingLanguages": ["C++", "C"],
+        "tools": []
+      },
+      "generalDescription": "Central software team member - Central software code development and algorithm integration",
+      "projectsAndTasks": {
+        "Navigation algorithms Integration": "Development of navigation algorithm wrapper, that integrated the Navigation algorithm with the central software and connect it with the hardware (IMU, Servo Motors, Cameras)",
+        "Testing, Debugging and validation": "Implementation of Unittest, On hardware debugging and validation of the software"
+      }
+    }
+  ],
+  "educations": [
+    {
+      "institute": "Technion-Israel Institute of technology (The best University in Israel)",
+      "degree": "Bachelor of Computer Science",
+      "projects": [
+        {
+          "courseName": "Introduction to Artificial Intelligence",
+          "description": "Manipulation of Dynamic Adaptive Streaming Algorithm into real-time video streaming",
+          "technology": "C/C++, Python, MPEG-DASH, Open Source"
+        },
+        {
+          "courseName": "Project in Computer Communication",
+          "description": "Implementation of Decision Tree based AI with the ability to playing Pac-Man",
+          "technology": "Python"
+        },
+        {
+          "courseName": "Project in Robotics",
+          "description": "Development of a Robot that performs world mapping and path travels from point A to B while avoiding obstacles",
+          "technology": "C++, Arduino"
+        },
+        {
+          "courseName": "Project in Arduino & IoT",
+          "description": "Autonomous car with lane detection, follow, and change abilities",
+          "technology": "C++, Arduino, NodeMCU"
+        },
+        {
+          "courseName": "Project in Software",
+          "description": "Comparison between Microsoft Azure and Google Cloud",
+          "technology": "Azure, GCP"
+        }
+      ]
+    }
+  ],
+  "misc": {
+    "languages": "English, Hebrew, and Russian",
+    "volunteerPrograms": "MADA (Ambulance first AID assist), Melech Project (Donation program, computers for everyone)",
+    "certificates": "CCNA (Cisco Certified Network Associate)"
+  }
+}
