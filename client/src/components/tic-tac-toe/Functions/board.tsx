@@ -40,16 +40,10 @@ const setCell = (
   yIndex: number,
 ) => {
   boardState.cellMatrix[yIndex][xIndex] = value;
-
   checkCol(boardState, xIndex);
   checkRow(boardState, yIndex);
-  if (isDiag1Affected(xIndex, yIndex)) {
-    checkDiag1(boardState);
-  }
-
-  if (isDiag2Affected(xIndex, yIndex)) {
-    checkDiag2(boardState);
-  }
+  checkDiag1(boardState);
+  checkDiag2(boardState);
 };
 
 // checkCol
@@ -83,7 +77,7 @@ const checkDiag2 = (boardState: BoardState) => {
     boardState.cellMatrix[0][2] === boardState.cellMatrix[1][1] &&
     boardState.cellMatrix[1][1] === boardState.cellMatrix[2][0]
   ) {
-    boardState.winner = boardState.cellMatrix[0][0];
+    boardState.winner = boardState.cellMatrix[0][2];
   }
 };
 
@@ -96,14 +90,6 @@ const checkRow = (boardState: BoardState, yIndex: number) => {
   }
 };
 
-const isDiag1Affected = (xIndex: number, yIndex: number): boolean => {
-  return xIndex == yIndex;
-};
-
-const isDiag2Affected = (xIndex: number, yIndex: number): boolean => {
-  return xIndex == (yIndex + 2) % 3;
-};
-
 const Board = {
   getInitBoardState,
   getBoard,
@@ -114,8 +100,6 @@ const Board = {
   checkDiag1,
   checkDiag2,
   checkRow,
-  isDiag1Affected,
-  isDiag2Affected,
 };
 
 export default Board;
