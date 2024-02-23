@@ -25,7 +25,6 @@
     "@emotion/styled": "^11.10.6",
     "@fireworks-js/react": "^2.10.5",
     "@mui/material": "^5.15.10",
-    "@reduxjs/toolkit": "^1.9.3",
     "@rollup/plugin-replace": "^5.0.2",
     "@types/lodash": "^4.14.195",
     "@types/react-redux": "^7.1.25",
@@ -41,6 +40,7 @@
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
     "@storybook/addon-essentials": "^7.0.20",
     "@storybook/addon-interactions": "^7.0.20",
     "@storybook/addon-links": "^7.0.20",
