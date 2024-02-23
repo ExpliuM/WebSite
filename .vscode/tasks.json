@@ -2,17 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "shell",
-      "command": "pwd",
-      "label": "Develop",
-      "dependsOn": ["Client dev", "Server debug"]
-    },
-    {
       "args": ["-F", "client", "dev"],
       "command": "pnpm",
-      "dependsOn": ["pnpm: install"],
+      "dependsOn": ["Install"],
       "detail": "pnpm -F client dev",
-      "label": "Client dev",
+      "label": "Debug client",
       "type": "shell"
     },
     {
