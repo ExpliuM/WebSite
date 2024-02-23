@@ -1,12 +1,12 @@
 import { PLAYER } from './constants';
 import Board, { BoardState } from './board';
 
-export interface GameState {
+export interface IGameState {
   boardState: BoardState;
   turn: PLAYER;
 }
 
-const getInitGameState = (): GameState => {
+const getInitGameState = (): IGameState => {
   const initGameState = {
     boardState: Board.getInitBoardState(),
     turn: PLAYER.X_PLAYER,
@@ -15,7 +15,7 @@ const getInitGameState = (): GameState => {
   return initGameState;
 };
 
-const playTurn = (gameState: GameState, xIndex: number, yIndex: number) => {
+const playTurn = (gameState: IGameState, xIndex: number, yIndex: number) => {
   const winner = Board.getWinner(gameState.boardState);
   if (
     winner === PLAYER.NO_ONE &&
@@ -27,13 +27,13 @@ const playTurn = (gameState: GameState, xIndex: number, yIndex: number) => {
   return Board.getWinner(gameState.boardState);
 };
 
-const reset = (gameState: GameState) => {
+const reset = (gameState: IGameState) => {
   const initGameState = getInitGameState();
   gameState.boardState = initGameState.boardState;
   gameState.turn = initGameState.turn;
 };
 
-const nextTurn = (gameState: GameState) => {
+const nextTurn = (gameState: IGameState) => {
   if (gameState.turn === PLAYER.X_PLAYER) {
     gameState.turn = PLAYER.O_PLAYER;
   } else {
