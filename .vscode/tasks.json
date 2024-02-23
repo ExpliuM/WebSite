@@ -8,76 +8,83 @@
       "dependsOn": ["Client dev", "Server debug"]
     },
     {
-      "type": "shell",
-      "command": "pnpm -F client dev",
-      "label": "Client dev",
+      "args": ["-F", "client", "dev"],
+      "command": "pnpm",
       "dependsOn": ["pnpm: install"],
-      "detail": "Client dev - vite"
+      "detail": "pnpm -F client dev",
+      "label": "Client dev",
+      "type": "shell"
     },
     {
-      "type": "shell",
       "command": "pnpm install",
-      "label": "pnpm install",
-      "dependsOn": [""]
+      "detail": "pnpm install",
+      "label": "Install",
+      "type": "shell"
     },
     {
-      "type": "shell",
-      "command": "pnpm -F client build",
+      "args": ["-F", "client", "build"],
+      "command": "pnpm",
+      "detail": "pnpm -F client build",
       "group": "build",
       "label": "Build client",
-      "detail": "Build client"
+      "type": "shell"
     },
     {
-      "type": "shell",
-      "command": "pnpm -F client run storybook",
+      "args": ["-F", "client", "run", "storybook"],
+      "command": "pnpm",
+      "detail": "pnpm -F client run storybook",
       "label": "Storybook",
-      "detail": "Storybook"
-    },
-    {
-      "type": "shell",
-      "command": "pnpm -F client install",
-      "label": "Install client",
-      "detail": "Install client"
-    },
-    {
-      "type": "shell",
-      "command": "pnpm -F server start:debug",
-      "label": "pnpm: server debug",
-      "detail": "Debug server",
-      "dependsOn": ["Debug server"]
-    },
-    {
-      "type": "shell",
-      "command": "pnpm -F server postgres:start",
-      "label": "Start postgres",
-      "detail": ""
-    },
-    {
-      "type": "shell",
-      "command": "pnpm -F server postgres:stop",
-      "label": "Stop postgres",
-      "detail": ""
+      "type": "shell"
     },
     {
       "type": "shell",
       "command": "pnpm",
+      "args": ["-F", "client", "install"],
+      "label": "Install client",
+      "detail": "pnpm -F client install"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": [ "-F", "server", "start:debug"],
+      "label": "Debug server",
+      "detail": "pnpm -F server start:debug",
+    },
+    {
+      "args": ["-F", "server", "postgres:start"],
+      "command": "pnpm",
+      "detail": "pnpm -F server postgres:start",
+      "label": "Start postgres",
+      "type": "shell",
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["-F", "server", "postgres:stop"],
+      "label": "Stop postgres",
+      "detail": "pnpm -F server postgres:stop"
+    },
+    {
       "args": ["-F", "server", "install"],
+      "command": "pnpm",
+      "detail": "pnpm -F server install",
       "label": "Install server",
-      "detail": "Install server"
+      "type": "shell",
     },
     {
       "type": "shell",
       "command": "pnpm -F server-seed run seed",
+      "args": ["-F", "server-seed", "run", "seed"],
       "group": "build",
       "label": "Seed server",
-      "detail": "Seed server"
+      "detail": "pnpm -F server-seed run seed"
     },
     {
       "type": "shell",
       "command": "pnpm",
       "args": ["-w", "eslint"],
       "label": "Lint",
-      "detail": "ESLint ."
+      "detail": "pnpm -w esLint"
     },
     {
       "type": "shell",
@@ -103,15 +110,15 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client","run", "deploy"],
-      "dependsOn": ["Build client"],
+      "args": ["-F", "client", "run", "deploy"],
+      "dependsOn": ["Clean client", "Build client"],
       "label": "Deploy client",
       "detail": "Deploy client"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client","run", "clean"],
+      "args": ["-F", "client", "run", "clean"],
       "label": "Clean client",
       "detail": "Clean client"
     }

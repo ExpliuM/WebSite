@@ -10,7 +10,6 @@
       "type": "chrome",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}",
-      "preLaunchTask": "run dev"
     }
   ]
 }
