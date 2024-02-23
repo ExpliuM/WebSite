@@ -16,11 +16,11 @@ const validator = new DataValidator<ICV>(
   cvSchema as unknown as JSONSchemaType<ICV>,
 );
 if (validator.validateData(cvData)) {
-  console.log('JSON data is valid.');
+  // console.log('JSON data is valid.');
 } else {
-  console.log('JSON data is invalid.');
-  console.log('cvData', cvData);
-  console.log('validator.getErrors()', validator.getErrors());
+  // console.log('JSON data is invalid.');
+  // console.log('cvData', cvData);
+  // console.log('validator.getErrors()', validator.getErrors());
 }
 
 const rootElement = document.getElementById('root');

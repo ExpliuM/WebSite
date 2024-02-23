@@ -10,7 +10,6 @@ import Project from "../../server/src/project/project.entity";
 // TODO: seed all data from json to postgres
 class CreateProfile implements Seeder {
   public async run(factory: Factory, connection: Connection): Promise<any> {
-    console.log();
     const profile = new Profile();
     profile.name = cv.name;
 
@@ -33,11 +32,6 @@ class CreateProfile implements Seeder {
           .values(projectEntities)
           .execute();
 
-        console.log(
-          "projectInsertResults.identifiers",
-          projectInsertResults.identifiers
-        );
-
         const education = new Education();
         education.degree = cvEducation.degree;
         education.institute = cvEducation.institute;
@@ -52,11 +46,6 @@ class CreateProfile implements Seeder {
       .values(educationEntities)
       .execute();
 
-    console.log(
-      "educationInsertResults.identifiers",
-      educationInsertResults.identifiers
-    );
-
     cv.experiences.forEach((cvExperience) => {
       const experience = new Experience();
       experience.companyName = cvExperience.companyName;
@@ -70,14 +59,8 @@ class CreateProfile implements Seeder {
       .into(Profile)
       .values([profile])
       .execute();
-
-    console.log(
-      "profileInsertResults.identifiers",
-      profileInsertResults.identifiers
-    );
-
+      
     const profileId = profileInsertResults.identifiers[0].id;
-    console.log("profileId", profileId);
   }
 }
 
