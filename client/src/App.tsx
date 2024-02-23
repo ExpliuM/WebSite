@@ -30,6 +30,7 @@ const App = () => {
             <Route path="/" element={<CV />}/>
             <Route path="cv" element={<CV />} />
             <Route path="tic-tac-toe" element={<TicTacToe />} />
+            <Route path="/Website/" element={<CV />}/>
             {/* Using path="*" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
               routes for. */}
