@@ -5,7 +5,7 @@ import ResetButton from './components/reset-button';
 import Fireworks from '@fireworks-js/react';
 import { setDirection, step } from './Redux/slice';
 import { Direction } from './Functions/direction';
-import { useEffect } from 'react';
+import { KeyboardEventHandler, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import StartButton from './components/start-button';
@@ -37,9 +37,11 @@ const Snake = (props: BoxProps) => {
     return () => {
       intervalId && clearInterval(intervalId);
     };
-  }, [isStarted]);
+  }, [dispatch, isStarted]);
 
-  const handleKeyDown = (event: KeyboardEvent): void => {
+  const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = (
+    event: React.KeyboardEvent,
+  ): void => {
     event.preventDefault();
     switch (event.key) {
       case 'ArrowDown':
