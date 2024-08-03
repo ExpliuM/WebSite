@@ -31,8 +31,8 @@ const childrenBoxProps: BoxProps = {
 
 const children = [...Array(3).keys()].map((key) => {
   const localChildrenBoxProps = cloneDeep(childrenBoxProps);
-  if (localChildrenBoxProps?.sx?.backgroundColor) {
-    localChildrenBoxProps.sx.backgroundColor = getRandomColor();
+  if (localChildrenBoxProps.bgcolor) {
+    localChildrenBoxProps.bgcolor = getRandomColor();
   }
   return <Box {...localChildrenBoxProps}>{key}</Box>;
 });

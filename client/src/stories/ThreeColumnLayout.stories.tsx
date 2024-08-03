@@ -21,8 +21,8 @@ const childrenBoxProps: BoxProps = {
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'center',
+  bgcolor: 'white',
   sx: {
-    backgroundColor: 'white',
     border: '1px solid black',
     height: '3rem',
     verticalAlign: 'middle',
@@ -32,8 +32,8 @@ const childrenBoxProps: BoxProps = {
 
 const children = [...Array(3).keys()].map((key) => {
   const localChildrenBoxProps = cloneDeep(childrenBoxProps);
-  if (localChildrenBoxProps?.sx?.backgroundColor) {
-    localChildrenBoxProps.sx.backgroundColor = getRandomColor();
+  if (localChildrenBoxProps.bgcolor) {
+    localChildrenBoxProps.bgcolor = getRandomColor();
   }
   return <Box {...localChildrenBoxProps}>{key}</Box>;
 });
