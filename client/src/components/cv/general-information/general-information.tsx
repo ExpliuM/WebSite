@@ -1,8 +1,7 @@
 import { Box, BoxProps } from '@mui/material';
-
-import GeneralInformationHeader from './general-information-header';
-import SubTitle from '../subtitle';
 import { IGeneralInformation as IGeneralInformation } from '../data/cv.types';
+import GeneralInformationBody from './general-information-body';
+import SubTitle from '../subtitle';
 
 export type GeneralInformationProps = BoxProps & {
   generalInformation: IGeneralInformation;
@@ -10,10 +9,11 @@ export type GeneralInformationProps = BoxProps & {
 
 const GeneralInformation = (props: GeneralInformationProps) => {
   const { generalInformation, ...otherProps } = props;
+
   return (
     <Box {...otherProps}>
       <SubTitle align="center">General Information</SubTitle>
-      <GeneralInformationHeader
+      <GeneralInformationBody
         generalInformation={generalInformation}
         display="flex"
         flexDirection="row"

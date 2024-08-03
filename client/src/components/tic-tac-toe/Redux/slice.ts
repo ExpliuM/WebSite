@@ -32,6 +32,6 @@ export const selectWinner = (state: { ticTacToe: IGameState }) => {
   return Board.getWinner(state.ticTacToe.boardState);
 };
 
-const reducer = Slice.reducer;
+const ticTacToeReducer = Slice.reducer;
 
-export default reducer;
+export default ticTacToeReducer;

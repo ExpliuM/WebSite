@@ -59,7 +59,7 @@ class CreateProfile implements Seeder {
       .into(Profile)
       .values([profile])
       .execute();
-      
+
     const profileId = profileInsertResults.identifiers[0].id;
   }
 }

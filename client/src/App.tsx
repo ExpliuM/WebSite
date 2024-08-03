@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { store } from './app/store';
 import Header from './components/header/header';
 import theme from './theme';
+import Snake from './pages/snake';
 
 const boxProps: BoxProps = {
   color: 'primary.main',
@@ -27,10 +28,11 @@ const App = () => {
           <Header {...headerProps} />
           <Routes>
             <Route index element={<CV />} />
-            <Route path="/" element={<CV />}/>
+            <Route path="/" element={<CV />} />
             <Route path="cv" element={<CV />} />
             <Route path="tic-tac-toe" element={<TicTacToe />} />
-            <Route path="/Website/" element={<CV />}/>
+            <Route path="snake" element={<Snake />} />
+            <Route path="/Website/" element={<CV />} />
             {/* Using path="*" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
               routes for. */}

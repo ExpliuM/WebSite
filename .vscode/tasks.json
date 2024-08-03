@@ -40,16 +40,16 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": [ "-F", "server", "start:debug"],
+      "args": ["-F", "server", "start:debug"],
       "label": "Debug server",
-      "detail": "pnpm -F server start:debug",
+      "detail": "pnpm -F server start:debug"
     },
     {
       "args": ["-F", "server", "postgres:start"],
       "command": "pnpm",
       "detail": "pnpm -F server postgres:start",
       "label": "Start postgres",
-      "type": "shell",
+      "type": "shell"
     },
     {
       "type": "shell",
@@ -63,7 +63,7 @@
       "command": "pnpm",
       "detail": "pnpm -F server install",
       "label": "Install server",
-      "type": "shell",
+      "type": "shell"
     },
     {
       "type": "shell",
@@ -78,7 +78,7 @@
       "command": "pnpm",
       "args": ["-w", "eslint"],
       "label": "Lint",
-      "detail": "pnpm -w esLint"
+      "detail": "Lint"
     },
     {
       "type": "shell",
@@ -115,6 +115,13 @@
       "args": ["-F", "client", "run", "clean"],
       "label": "Clean client",
       "detail": "Clean client"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["-w", "clean:packages"],
+      "label": "Clean packages",
+      "detail": "node_modules"
     }
   ]
 }

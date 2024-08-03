@@ -1,13 +1,14 @@
 {
   "scripts": {
+    "clean:packages": "find . -type d -name \"node_modules\" -prune | xargs rm -rf",
     "eslint": "eslint .",
     "prettier:check": "prettier . --check",
     "prettier:format": "prettier . --write"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.3",
-    "eslint": "^8.56.0",
-    "prettier": "^2.8.8",
-    "typescript": "^5.3.3"
+    "@types/jest": "29.5.3",
+    "eslint": "8.56.0",
+    "prettier": "2.8.8",
+    "typescript": "5.5.4"
   }
 }

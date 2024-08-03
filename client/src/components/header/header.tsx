@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const buttonsData: ReadonlyArray<{ text: string; href: string }> = [
   { text: 'CV', href: '/cv' },
   { text: 'Tic Tac Toe', href: '/tic-tac-toe' },
+  { text: 'Snake', href: '/snake' },
 ];
 
 const Header = (props: BoxProps) => (
