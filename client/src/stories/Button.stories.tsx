@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import { store } from '../app/store';
 import ResetButton from '../components/tic-tac-toe/components/reset-button';
 import type { Meta, StoryObj } from '@storybook/react';

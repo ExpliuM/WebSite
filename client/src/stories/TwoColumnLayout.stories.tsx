@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { store } from '../app/store';
-import { BoxProps } from '@mui/material';
+import { Box, BoxProps } from '@mui/material';
 import TwoColumnLayout from '../base-components/two-column-layout/two-column-layout';
 import { getRandomColor } from '../utils';
 import { cloneDeep } from 'lodash';
+import { Provider } from 'react-redux';
 
 const meta = {
   title: 'TwoColumnLayout',
