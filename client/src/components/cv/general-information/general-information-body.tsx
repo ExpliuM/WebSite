@@ -1,8 +1,8 @@
 import {
   AiOutlineHome,
-  AiOutlinePhone,
   AiOutlineLinkedin,
   AiOutlineMail,
+  AiOutlinePhone,
 } from 'react-icons/ai';
 import { Box, BoxProps, Typography, TypographyProps } from '@mui/material';
 

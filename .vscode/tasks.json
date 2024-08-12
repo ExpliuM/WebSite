@@ -2,11 +2,31 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "args": ["-F", "client", "dev"],
+      "args": [
+        "-F",
+        "client",
+        "serve"
+      ],
       "command": "pnpm",
-      "dependsOn": ["Install"],
-      "detail": "pnpm -F client dev",
-      "label": "Debug client",
+      "dependsOn": [
+        "Install"
+      ],
+      "detail": "pnpm client serve",
+      "label": "Serve client",
+      "type": "shell"
+    },
+    {
+      "args": [
+        "-F",
+        "client",
+        "dev"
+      ],
+      "command": "pnpm",
+      "dependsOn": [
+        "Install"
+      ],
+      "detail": "pnpm client dev",
+      "label": "Dev client",
       "type": "shell"
     },
     {
@@ -16,7 +36,11 @@
       "type": "shell"
     },
     {
-      "args": ["-F", "client", "build"],
+      "args": [
+        "-F",
+        "client",
+        "build"
+      ],
       "command": "pnpm",
       "detail": "pnpm -F client build",
       "group": "build",
@@ -24,7 +48,12 @@
       "type": "shell"
     },
     {
-      "args": ["-F", "client", "run", "storybook"],
+      "args": [
+        "-F",
+        "client",
+        "run",
+        "storybook"
+      ],
       "command": "pnpm",
       "detail": "pnpm -F client run storybook",
       "label": "Storybook",
@@ -33,19 +62,31 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client", "install"],
+      "args": [
+        "-F",
+        "client",
+        "install"
+      ],
       "label": "Install client",
       "detail": "pnpm -F client install"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "server", "start:debug"],
+      "args": [
+        "-F",
+        "server",
+        "start:debug"
+      ],
       "label": "Debug server",
       "detail": "pnpm -F server start:debug"
     },
     {
-      "args": ["-F", "server", "postgres:start"],
+      "args": [
+        "-F",
+        "server",
+        "postgres:start"
+      ],
       "command": "pnpm",
       "detail": "pnpm -F server postgres:start",
       "label": "Start postgres",
@@ -54,12 +95,20 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "server", "postgres:stop"],
+      "args": [
+        "-F",
+        "server",
+        "postgres:stop"
+      ],
       "label": "Stop postgres",
       "detail": "pnpm -F server postgres:stop"
     },
     {
-      "args": ["-F", "server", "install"],
+      "args": [
+        "-F",
+        "server",
+        "install"
+      ],
       "command": "pnpm",
       "detail": "pnpm -F server install",
       "label": "Install server",
@@ -68,7 +117,12 @@
     {
       "type": "shell",
       "command": "pnpm -F server-seed run seed",
-      "args": ["-F", "server-seed", "run", "seed"],
+      "args": [
+        "-F",
+        "server-seed",
+        "run",
+        "seed"
+      ],
       "group": "build",
       "label": "Seed server",
       "detail": "pnpm -F server-seed run seed"
@@ -76,50 +130,89 @@
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-w", "eslint"],
+      "args": [
+        "run",
+        "lint"
+      ],
       "label": "Lint",
       "detail": "Lint"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-w", "prettier:check"],
+      "args": [
+        "run",
+        "lint:fix"
+      ],
+      "label": "Lint fix",
+      "detail": "Lint fix"
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "-w",
+        "prettier:check"
+      ],
       "label": "Prettier check",
       "detail": "Prettier check ."
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-w", "prettier:format"],
+      "args": [
+        "-w",
+        "prettier:format"
+      ],
       "label": "Prettier format",
       "detail": "Prettier format"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client", "host"],
+      "args": [
+        "-F",
+        "client",
+        "host"
+      ],
       "label": "Host client",
       "detail": "http-server dist/"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client", "run", "deploy"],
-      "dependsOn": ["Clean client", "Build client"],
+      "args": [
+        "-F",
+        "client",
+        "run",
+        "deploy"
+      ],
+      "dependsOn": [
+        "Clean client",
+        "Build client"
+      ],
       "label": "Deploy client",
       "detail": "Deploy client"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-F", "client", "run", "clean"],
+      "args": [
+        "-F",
+        "client",
+        "run",
+        "clean"
+      ],
       "label": "Clean client",
       "detail": "Clean client"
     },
     {
       "type": "shell",
       "command": "pnpm",
-      "args": ["-w", "clean:packages"],
+      "args": [
+        "-w",
+        "clean:packages"
+      ],
       "label": "Clean packages",
       "detail": "node_modules"
     }

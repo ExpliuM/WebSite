@@ -35,7 +35,7 @@ const children = [...Array(3).keys()].map((key) => {
   if (localChildrenBoxProps.bgcolor) {
     localChildrenBoxProps.bgcolor = getRandomColor();
   }
-  return <Box {...localChildrenBoxProps}>{key}</Box>;
+  return <Box {...localChildrenBoxProps}> {key} </Box>;
 });
 
 export const Primary: Story = {

@@ -4,5 +4,6 @@ export enum PLAYER {
   O_PLAYER = 'O',
 }
 
-export const X_SIZE = 3;
-export const Y_SIZE = 3;
+export const BOARD_SIZE = 3;
+export const X_SIZE = BOARD_SIZE;
+export const Y_SIZE = BOARD_SIZE;

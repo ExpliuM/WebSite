@@ -1,4 +1,4 @@
-import { Button, Box, Grid, BoxProps, Typography } from '@mui/material';
+import { Box, BoxProps, Button, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 // TODO: To make projects page and to put Tic Tac Toe and Components under it

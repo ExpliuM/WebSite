@@ -1,14 +1,13 @@
-import { X_SIZE, Y_SIZE } from "./constants";
-import { Direction } from "./direction";
-import { IGameState } from "./game-state";
-import { Position } from "./position";
-import { getHead } from "./snake";
+import { X_SIZE, Y_SIZE } from './constants';
+import { Direction } from './interfaces/direction';
+import { IGameState } from './game-state';
+import { Position } from './interfaces/position';
+import { getHead } from './objects/snake';
 
 export const getNextHeadPosition = (gameState: IGameState): Position => {
-  const { snake } = gameState;
-  const headPosition = {...getHead(snake)};
-  // const nextHeadPosition = {...headPosition}
-  switch (gameState.direction) {
+  const { snake, activeDirection } = gameState;
+  const headPosition = { ...getHead(snake) };
+  switch (activeDirection) {
     case Direction.Down:
       headPosition.y--;
       break;
@@ -30,7 +29,7 @@ export const getNextHeadPosition = (gameState: IGameState): Position => {
 };
 
 export const GameLogic = {
-  getNextHeadPosition
+  getNextHeadPosition,
 };
 
-export default GameLogic
+export default GameLogic;

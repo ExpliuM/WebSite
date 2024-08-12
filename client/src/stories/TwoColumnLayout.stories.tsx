@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Provider } from 'react-redux';
 import { store } from '../app/store';
-import { Box, BoxProps } from '@mui/material';
+import { BoxProps } from '@mui/material';
 import TwoColumnLayout from '../base-components/two-column-layout/two-column-layout';
 import { getRandomColor } from '../utils';
 import { cloneDeep } from 'lodash';
@@ -11,7 +10,7 @@ const meta = {
   title: 'TwoColumnLayout',
   component: TwoColumnLayout,
   tags: ['autodocs'],
-  decorators: [(story) => <Provider store={store}>{story()}</Provider>],
+  decorators: [(story) => <Provider store={store}> {story()} </Provider>],
 } satisfies Meta<typeof TwoColumnLayout>;
 
 export default meta;
@@ -34,7 +33,7 @@ const children = [...Array(3).keys()].map((key) => {
   if (localChildrenBoxProps.bgcolor) {
     localChildrenBoxProps.bgcolor = getRandomColor();
   }
-  return <Box {...localChildrenBoxProps}>{key}</Box>;
+  return <Box {...localChildrenBoxProps}> {key} </Box>;
 });
 
 export const Primary: Story = {

@@ -7,9 +7,12 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint:fix": "eslint --fix",
+    "lint": "eslint ",
     "postgres:start": "brew services run postgresql@15",
     "postgres:stop": "brew services stop postgresql@15",
+    "prettier:check": "prettier . --check",
+    "prettier:format": "prettier . --write",
     "schema:drop": "ts-node ./node_modules/typeorm/cli.js schema:drop",
     "schema:sync": "ts-node ./node_modules/typeorm/cli.js schema:sync",
     "start:debug": "nest start --debug --watch",
@@ -34,6 +37,7 @@
     "webpack": "5.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^8.57.0",
     "@nestjs/cli": "10.0.1",
     "@nestjs/schematics": "10.0.1",
     "@nestjs/testing": "10.0.0",
@@ -45,9 +49,10 @@
     "@types/supertest": "2.0.12",
     "@typescript-eslint/eslint-plugin": "5.59.11",
     "@typescript-eslint/parser": "5.59.11",
-    "eslint": "8.42.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
+    "globals": "^15.9.0",
     "jest": "29.5.0",
     "prettier": "2.8.8",
     "source-map-support": "0.5.21",
@@ -56,7 +61,8 @@
     "ts-loader": "9.4.3",
     "ts-node": "10.9.1",
     "tsconfig-paths": "4.2.0",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "typescript-eslint": "^8.0.1"
   },
   "jest": {
     "moduleFileExtensions": [

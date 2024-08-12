@@ -1,21 +1,19 @@
-import { Cell } from './cell';
-import { Direction } from './direction';
-import { getCell, setCell, setRandomApple } from './board';
-import { getInitGameState, IGameState } from './game-state';
+import { Direction } from './interfaces/direction';
+import { getRandomApplePosition } from './objects/board';
+import { IGameState, getInitGameState } from './game-state';
 import { getNextHeadPosition } from './game-logic';
 import { X_SIZE, Y_SIZE } from './constants';
-
+import { arePositionsEqual, positionCountInPositions } from './interfaces/position';
 
 const reset = (gameState: IGameState) => {
   const initGameState = getInitGameState();
-
-  gameState.board = initGameState.board;
-  gameState.direction = initGameState.direction;
-  gameState.snake = initGameState.snake
+  gameState.nextDirection = initGameState.nextDirection;
+  gameState.snake = initGameState.snake;
+  gameState.won = initGameState.won;
 };
 
-const setDirection = (gameState: IGameState, direction: Direction) => {
-  gameState.direction = direction;
+const setNextDirection = (gameState: IGameState, nextDirection: Direction) => {
+  gameState.nextDirection = nextDirection;
 };
 
 const setIsStarted = (gameState: IGameState, isStarted: boolean) => {
@@ -23,39 +21,35 @@ const setIsStarted = (gameState: IGameState, isStarted: boolean) => {
 };
 
 const step = (gameState: IGameState) => {
-  const { board, snake } = gameState;
+  const { apple, snake, nextDirection } = gameState;
 
-  console.log("🚀 ~ step ~ gameState.snake.length:", gameState.snake.length)
   if (gameState.snake.length === X_SIZE * Y_SIZE - 1) {
     gameState.won = true;
     gameState.isStarted = false;
     return;
   }
 
+  if (nextDirection !== undefined) {
+    gameState.activeDirection = nextDirection
+    gameState.nextDirection = undefined
+  }
   const nextHeadPosition = getNextHeadPosition(gameState);
+  snake.push(nextHeadPosition);
 
-  // Handle tail
-  const nextCell = getCell(board, nextHeadPosition);
-  if (nextCell !== Cell.Apple) {
-    const positionToDelete = gameState.snake.shift();
-    if (positionToDelete) {
-      setCell(board, Cell.None, positionToDelete)
-    }
+  if (arePositionsEqual(apple, nextHeadPosition)) {
+    gameState.apple = getRandomApplePosition(snake);
   } else {
-    setRandomApple(board);
+    gameState.snake.shift();
   }
 
-  if (gameState.snake.some(position => position.x === nextHeadPosition.x && position.y === nextHeadPosition.y)) {
+  if (positionCountInPositions(snake, nextHeadPosition) > 1) {
     gameState.lost = true;
     gameState.isStarted = false;
     return;
   }
 
-  // Move the head
-  setCell(board, Cell.Snake, nextHeadPosition);
-  snake.push(nextHeadPosition);
 };
 
-const GameActions = { reset, setDirection, setIsStarted, step };
+const GameActions = { reset, setNextDirection, setIsStarted, step };
 
 export default GameActions;

@@ -1,7 +1,7 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import GameActions from '../Functions/game-actions';
-import { getInitGameState, IGameState } from '../Functions/game-state';
-import { Direction } from '../Functions/direction';
+import { IGameState, getInitGameState } from '../Functions/game-state';
+import { Direction } from '../Functions/interfaces/direction';
 
 const initialState: IGameState = getInitGameState();
 
@@ -15,9 +15,12 @@ export const Slice = createSlice({
     reset: (gameState: IGameState) => {
       GameActions.reset(gameState);
     },
-    setDirection: (gameState: IGameState, action: PayloadAction<{ direction: Direction }>,) => {
-      const { direction } = action.payload;
-      GameActions.setDirection(gameState, direction);
+    setNextDirection: (
+      gameState: IGameState,
+      action: PayloadAction<{ nextDirection: Direction }>,
+    ) => {
+      const { nextDirection } = action.payload;
+      GameActions.setNextDirection(gameState, nextDirection);
     },
     start: (gameState: IGameState) => {
       GameActions.setIsStarted(gameState, true);
@@ -28,7 +31,7 @@ export const Slice = createSlice({
   },
 });
 
-export const { pause, reset, setDirection, start, step } = Slice.actions;
+export const { pause, reset, setNextDirection, start, step } = Slice.actions;
 
 const snakeReducer = Slice.reducer;
 

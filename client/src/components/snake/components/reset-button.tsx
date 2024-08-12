@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import { reset } from '../Redux/slice';
 
-// TODO: To improve this buttons style
 const ResetButton = (props: ButtonProps) => {
   const dispatch = useDispatch();
 

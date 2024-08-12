@@ -1,7 +1,6 @@
+import { Position, Positions } from '../interfaces/position';
 
-import { Position } from './position';
-
-export type Snake = Position[];
+export type Snake = Positions;
 
 export function getHead(snake: Snake): Position {
   return snake[snake.length - 1];

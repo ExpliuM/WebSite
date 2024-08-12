@@ -9,9 +9,15 @@ import {
 } from '@mui/material';
 import { useSelector } from 'react-redux';
 
-import { Cell } from '../Functions/cell';
+import { Cell } from '../Functions/interfaces/cell';
 import { X_SIZE, Y_SIZE } from '../Functions/constants';
-import { selectBoard } from '../Redux/selectors';
+import { selectApple, selectSnake } from '../Redux/selectors';
+import { range } from 'lodash';
+import {
+  arePositionsEqual,
+  Position,
+  positionsContains,
+} from '../Functions/interfaces/position';
 
 const styles: { [key in Cell]: SxProps<Theme> } = {
   [Cell.Apple]: {
@@ -26,7 +32,8 @@ const styles: { [key in Cell]: SxProps<Theme> } = {
 };
 
 const Board = (props: BoxProps, gridProps: GridProps) => {
-  const board = useSelector(selectBoard);
+  const apple = useSelector(selectApple);
+  const snake = useSelector(selectSnake);
 
   return (
     <Box {...props}>
@@ -38,20 +45,31 @@ const Board = (props: BoxProps, gridProps: GridProps) => {
         gap={0.5}
         {...gridProps}
       >
-        {board.map((boardRow, yIndex) => (
+        {range(Y_SIZE).map((yIndex) => (
           <Grid key={yIndex} display="flex" gap={0.5} gridRow={X_SIZE}>
-            {boardRow.map((cell, xIndex) => (
-              <Paper
-                key={xIndex}
-                sx={{
-                  backgroundColor: 'primary.light',
-                  height: 20,
-                  padding: 'xs',
-                  width: 20,
-                  ...(styles[cell] || {}),
-                }}
-              />
-            ))}
+            {range(X_SIZE).map((xIndex) => {
+              const position: Position = { x: xIndex, y: yIndex };
+
+              let cell = Cell.None;
+              if (arePositionsEqual(apple, position)) {
+                cell = Cell.Apple;
+              } else if (positionsContains(snake, position)) {
+                cell = Cell.Snake;
+              }
+
+              return (
+                <Paper
+                  key={xIndex}
+                  sx={{
+                    backgroundColor: 'primary.light',
+                    height: 20,
+                    padding: 'xs',
+                    width: 20,
+                    ...(styles[cell] || {}),
+                  }}
+                />
+              );
+            })}
           </Grid>
         ))}
       </Grid>

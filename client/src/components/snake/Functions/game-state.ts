@@ -1,31 +1,32 @@
 import { randomEnumValue } from '../../../utils';
-import { Board, getRandomPosition as getRandomPosition, initBoard, setCell, setRandomApple } from './board';
-import { Cell } from './cell';
-import { Direction } from './direction';
-import { Position } from './position';
+
+import { Direction } from './interfaces/direction';
+import { getRandomPosition, Position, Positions } from './interfaces/position';
+import { getRandomApplePosition } from './objects/board';
 
 export interface IGameState {
-  board: Board;
-  direction: Direction;
-  isStarted: boolean
-  lost: boolean
-  snake: Position[];
-  won: boolean,
+  activeDirection: Direction;
+  apple: Position;
+  isStarted: boolean;
+  lost: boolean;
+  nextDirection: Direction | undefined;
+  snake: Positions;
+  won: boolean;
 }
 
 export const getInitGameState = (): IGameState => {
-  const board = initBoard();
-  const randomPosition = getRandomPosition();
+  const snake = [getRandomPosition()];
+  const apple = getRandomApplePosition(snake);
 
-  setRandomApple(board);
-  setCell(board, Cell.Snake, randomPosition);
+  const direction = randomEnumValue(Direction)
 
   const initGameState: IGameState = {
-    board,
-    direction: randomEnumValue(Direction),
+    activeDirection: direction,
+    apple,
     isStarted: false,
     lost: false,
-    snake: [randomPosition],
+    nextDirection: undefined,
+    snake,
     won: false,
   };
 
