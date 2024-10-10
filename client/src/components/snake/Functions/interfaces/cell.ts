@@ -1,5 +1,6 @@
 export enum Cell {
   Apple,
   None,
-  Snake,
+  SnakeBody,
+  SnakeHead,
 }

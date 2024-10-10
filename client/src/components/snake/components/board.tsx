@@ -26,8 +26,11 @@ const styles: { [key in Cell]: SxProps<Theme> } = {
   [Cell.None]: {
     backgroundColor: 'primary.light',
   },
-  [Cell.Snake]: {
-    backgroundColor: 'primary.dark',
+  [Cell.SnakeBody]: {
+    backgroundColor: 'secondary.main',
+  },
+  [Cell.SnakeHead]: {
+    backgroundColor: 'secondary.dark',
   },
 };
 
@@ -53,8 +56,10 @@ const Board = (props: BoxProps, gridProps: GridProps) => {
               let cell = Cell.None;
               if (arePositionsEqual(apple, position)) {
                 cell = Cell.Apple;
+              } else if (arePositionsEqual(snake[snake.length - 1], position)) {
+                cell = Cell.SnakeHead;
               } else if (positionsContains(snake, position)) {
-                cell = Cell.Snake;
+                cell = Cell.SnakeBody;
               }
 
               return (
